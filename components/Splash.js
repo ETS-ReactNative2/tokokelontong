@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 
 const SplashScreen = () => {
@@ -28,11 +28,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text: {
-    fontSize: 22,
+    fontFamily: 'Aesthet Nova Bold',
+    fontSize: 25,
     color: '#fff',
-    flexDirection: 'column',
-    fontFamily: 'ubuntu',
-    fontWeight: 'bold',
   },
 });
 
