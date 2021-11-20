@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,22 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>majestic.ttf</string>
+		<string>ubuntu.ttf</string>
+		<string>zcool.ttf</string>
+		<string>Majestic.ttf</string>
+		<string>Ubuntu.ttf</string>
+		<string>Zcool.ttf</string>
+		<string>UbuntuCondensed-Regular.ttf</string>
+		<string>ZCOOLXiaoWei-Regular.ttf</string>
+		<string>HardsignLayered-eZ1MB.ttf</string>
+		<string>Aesthet Nova Black.ttf</string>
+		<string>Aesthet Nova Bold.ttf</string>
+		<string>Aesthet Nova Light.ttf</string>
+		<string>Aesthet Nova Medium.ttf</string>
+		<string>Aesthet Nova Regular.ttf</string>
+	</array>
 </dict>
 </plist>
