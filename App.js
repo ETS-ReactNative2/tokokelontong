@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
+import { Home } from './components/home/Home';
 import SplashScreen from './components/Splash';
 
 const App = () => {
   return (
-    <SplashScreen />
-  )
+    <View
+      style={{
+        flex: 1,
+      }}>
+      <Home />
+    </View>
+  );
 }
 
 export default App;

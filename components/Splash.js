@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#acd792',
   },
   image: {
-    height: 130,
-    width: 170,
+    height: 100,
+    width: 140,
     marginBottom: 10,
   },
   text: {
