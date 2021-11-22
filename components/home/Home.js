@@ -1,9 +1,10 @@
 import React, { Component, useState } from 'react';
-import {Dimensions, StatusBar, Text, TextInput, View} from 'react-native';
+import {Dimensions, KeyboardAvoidingView, ScrollView, StatusBar, Text, TextInput, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Body } from './Body';
 import { Footer } from './Footer';
 import { Header, size } from './Header';
+import { Search } from './Search';
 
 export const Home = () => {
     return (
@@ -11,7 +12,6 @@ export const Home = () => {
         style={{
           flex: 1,
           backgroundColor: '#fff',
-        //   marginBottom: 60
         }}>
         <StatusBar
           animated={true}
@@ -20,15 +20,18 @@ export const Home = () => {
         />
         <View
           style={{
-            height: 170,
+            height: 150,
             width: Dimensions.get('screen').width,
             backgroundColor: '#acd792',
-            borderBottomLeftRadius: 50,
+            borderBottomLeftRadius: 30,
           }}
         />
-        <Header flex={1} />
-        <Body flex={1.2} />
-        <Footer flex={1} />
+        <Search />
+        <ScrollView showsVerticalScrollIndicator={false} >
+          <Header />
+          <Body />
+          <Footer />
+        </ScrollView>
       </View>
     );
 }

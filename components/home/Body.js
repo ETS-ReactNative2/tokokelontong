@@ -34,13 +34,11 @@ const data = [
   },
 ];
 
-export const Body = ({flex}) => {
+export const Body = () => {
     return (
       <View
         style={{
-          height: 50,
-          marginTop: 120,
-          flex: flex,
+          marginTop: 40,
         }}>
         <View
           style={{
@@ -72,7 +70,7 @@ export const Body = ({flex}) => {
             keyExtractor={item => item.title}
             horizontal={true}
             style={{
-              marginTop: 20,
+              marginTop: 30,
             }}
             contentContainerStyle={{
               paddingLeft: 20,
@@ -93,13 +91,13 @@ const Item = ({item}) => (
     <View
       style={{
         backgroundColor: '#fff',
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
         paddingTop: 15,
         paddingBottom: 10,
         borderRadius: 15,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 5,
+        marginBottom: 10,
         marginLeft: 1,
         elevation: 4,
         marginEnd: 19
@@ -114,7 +112,7 @@ const Item = ({item}) => (
       <Text
         style={{
           marginTop: 10,
-          fontSize: 16,
+          fontSize: 14,
           fontFamily: 'Aesthet Nova Regular',
           color: '#656565',
         }}>
@@ -123,7 +121,7 @@ const Item = ({item}) => (
       <Text
         style={{
           marginTop: 3,
-          fontSize: 16,
+          fontSize: 12,
           fontFamily: 'Aesthet Nova Regular',
           color: '#656565',
         }}>

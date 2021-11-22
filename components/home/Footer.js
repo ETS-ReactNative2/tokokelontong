@@ -35,13 +35,12 @@ const data = [
   },
 ];
 
-export const Footer = ({flex}) => {
+export const Footer = () => {
     return (
       <View
         style={{
-          height: 50,
-          marginTop: 0,
-          flex: flex,
+          marginTop: 35,
+          marginBottom: 10
         }}>
         <View
           style={{
