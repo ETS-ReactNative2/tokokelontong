@@ -1,10 +1,16 @@
-import React from 'react';
+import { StackActions } from '@react-navigation/routers';
+import React, { useEffect } from 'react';
 import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.dispatch(StackActions.replace('BottomTab'));
+    }, 500)
+  }, []);
+
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor="#acd792" barStyle='light-content' hidden={true} />
         <Image
           source={require('../src/image/logosplash.png')}
           style={styles.image}
