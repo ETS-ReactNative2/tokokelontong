@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { Dimensions, Text, TextInput, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -15,7 +15,7 @@ export const Search = () => {
       <View
         style={{
           position: 'absolute',
-          top: 30,
+          top: 20,
           width: Dimensions.get('screen').width
         }}>
         <View

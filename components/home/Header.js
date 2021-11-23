@@ -1,6 +1,5 @@
-import React, {Component, useEffect, useState} from 'react';
-import {FlatList, Image, Text, TextInput, View} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import React from 'react';
+import {FlatList, Image, Text, View} from 'react-native';
 
 const data = [
   {

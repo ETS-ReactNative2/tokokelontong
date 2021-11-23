@@ -1,6 +1,6 @@
 import { StackActions } from '@react-navigation/routers';
 import React, { useEffect } from 'react';
-import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 const SplashScreen = ({navigation}) => {
   useEffect(() => {

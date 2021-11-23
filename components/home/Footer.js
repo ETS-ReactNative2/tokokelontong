@@ -1,5 +1,5 @@
-import React, {Component, useState} from 'react';
-import {Dimensions, FlatList, Image, StatusBar, Text, TextInput, View} from 'react-native';
+import React from 'react';
+import { FlatList, Image, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const data = [

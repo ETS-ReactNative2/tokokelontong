@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
 
 const data = [
