@@ -6,7 +6,7 @@ const SplashScreen = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
       navigation.dispatch(StackActions.replace('BottomTab'));
-    }, 500)
+    }, 1000)
   }, []);
 
     return (
