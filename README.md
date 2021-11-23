@@ -1,6 +1,6 @@
 # Toko Kelontong
 
-# LICENSE
+## LICENSE
 MIT License
 
 Copyright (c) Year Full name
