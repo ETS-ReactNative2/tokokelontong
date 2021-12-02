@@ -20,15 +20,28 @@ const data = [
 ];
 export const ListHeaderRecipe = () => {
     return (
-      <FlatList
-        data={data}
-        renderItem={RenderItemHorizontal}
-        horizontal={true}
-        contentContainerStyle={{
-          paddingLeft: 10,
-        }}
-        showsHorizontalScrollIndicator={false}
-      />
+      <View>
+        <Text
+          style={{
+            fontFamily: 'Aesthet Nova Regular',
+            fontSize: 19,
+            marginLeft: 15,
+            marginTop: 20,
+            marginBottom: 5,
+            color: '#0a4823',
+          }}>
+          Voucher Kamu :
+        </Text>
+        <FlatList
+          data={data}
+          renderItem={RenderItemHorizontal}
+          horizontal={true}
+          contentContainerStyle={{
+            paddingLeft: 10,
+          }}
+          showsHorizontalScrollIndicator={false}
+        />
+      </View>
     );
 }
 
@@ -49,9 +62,27 @@ const ItemHorizontal = ({item}) => {
         marginTop: 15,
         marginEnd: 10,
         marginBottom: 25,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
         alignItems: 'center',
+        
       }}>
+      <View
+        style={{
+          width: 20,
+          height: 20,
+          backgroundColor: '#fff',
+          borderTopRightRadius: 50,
+          borderBottomRightRadius: 50,
+        }}></View>
+      <View
+        style={{
+          width: 20,
+          height: 20,
+          backgroundColor: '#fff',
+          borderTopLeftRadius: 50,
+          borderBottomLeftRadius: 50,
+        }}></View>
     </ImageBackground>
   );
 };

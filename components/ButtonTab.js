@@ -36,7 +36,7 @@ export const ButtonTab = ({position, navigations, icon}) => {
         <Icon name={icon} size={25} color={'#656565'} />
         <Text
           style={{
-            color: '#000',
+            color: '#656565',
             marginBottom: 5,
             fontFamily: 'Aesthet Nova Regular',
             fontSize: 12,

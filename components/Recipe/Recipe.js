@@ -94,7 +94,21 @@ export const Recipe = () => {
         </Text>
       </View>
       <FlatList
-        ListHeaderComponent={<ListHeaderRecipe />}
+        ListHeaderComponent={
+          <View>
+            <ListHeaderRecipe />
+            <Text
+              style={{
+                fontFamily: 'Aesthet Nova Regular',
+                fontSize: 19,
+                marginLeft: 15,
+                marginBottom: 20,
+                color: '#0a4823',
+              }}>
+              Resep Masakan :
+            </Text>
+          </View>
+        }
         data={data}
         renderItem={RenderItemVertical}
         keyExtractor={item => item.resep}
@@ -113,14 +127,21 @@ const ItemVertical = ({item}) => {
         backgroundColor: '#fff',
         height: 110,
         marginEnd: 10,
-        marginBottom: 15,
+        marginBottom: 10,
         borderRadius: 10,
         marginHorizontal: 10,
         flex: 1,
         flexDirection: 'row',
         padding: 10,
         alignItems: 'center',
-        elevation: 2,
+        elevation: 4,
+        shadowColor: 'green',
+        shadowOffset: {
+          width: 5,
+          height: 10,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 50,
       }}>
       <Image
         source={{

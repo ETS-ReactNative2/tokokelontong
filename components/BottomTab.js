@@ -3,10 +3,10 @@ import React, { createContext, useEffect, useState } from 'react';
 import { Cart } from './Cart/Cart';
 import { Home } from './home/Home';
 import { Orders } from './Orders/Orders';
-import { Recipe } from './Recipe/Recipe';
 import { User } from './User/User';
 import { BackHandler } from 'react-native';
 import { ButtonTab } from './ButtonTab';
+import { StackRecipe } from './Recipe/StackRecipe';
 
 const Tab = createBottomTabNavigator();
 export const colorContext = createContext({
@@ -55,7 +55,7 @@ export const BottomTab = () => {
           />
           <Tab.Screen
             name="Recipe"
-            component={Recipe}
+            component={StackRecipe}
             options={{
               tabBarButton: () => (
                 <ButtonTab
