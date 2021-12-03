@@ -1,7 +1,21 @@
+import { useNavigation } from '@react-navigation/core';
 import React, { useContext, useEffect } from 'react';
-import {BackHandler, Text, View} from 'react-native';
+import {BackHandler, Button, Text, View} from 'react-native';
+import { colorContext } from '../BottomTab';
 
-export const DetailRecipe = ({navigations, route}) => {
+export const DetailRecipe = ({route}) => {
+  const navigation = useNavigation();
+  // const {colorBackground, setColorBackground} = useContext(colorContext);
+
+  // useEffect(() => {
+  //   BackHandler.addEventListener('hardwareBackPress', () => {
+  //     console.log('back dari detail');
+  //   });
+  //   return () => {
+  //     BackHandler.removeEventListener();
+  //   };
+  // }, []);
+
   return (
     <View
       style={{
@@ -18,6 +32,15 @@ export const DetailRecipe = ({navigations, route}) => {
         }}>
         Detail Recipe
       </Text>
+      <Text>{route.params.nama}</Text>
+      <Button
+        title="Detail"
+        onPress={() => {
+          navigation.navigate('BottomTab', {
+            screen: 'User',
+          })
+        }}
+      />
     </View>
   );
 };

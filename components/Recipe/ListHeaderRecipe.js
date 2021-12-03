@@ -30,7 +30,7 @@ export const ListHeaderRecipe = () => {
             marginBottom: 5,
             color: '#0a4823',
           }}>
-          Voucher Kamu :
+          Voucher Kamu
         </Text>
         <FlatList
           data={data}

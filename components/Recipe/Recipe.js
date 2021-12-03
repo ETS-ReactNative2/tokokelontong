@@ -1,5 +1,7 @@
-import React from 'react';
-import { FlatList, Image, Text, View} from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import React, { useContext, useEffect } from 'react';
+import { BackHandler, FlatList, Image, Text, View} from 'react-native';
+import { colorContext } from '../BottomTab';
 import { ListHeaderRecipe } from './ListHeaderRecipe';
 
 const data = [
@@ -71,6 +73,16 @@ const data = [
   },
 ];
 export const Recipe = () => {
+  const navigations = useNavigation();
+  // const {colorBackground, setColorBackground} = useContext(colorContext);
+
+  // useEffect(() => {
+  //     const sub = navigations.addListener('focus', () => {
+  //       setColorBackground('second');
+  //       console.log('focus recipe');
+  //     })
+  // }, [navigations]);
+  
   return (
     <View
       style={{
@@ -105,7 +117,7 @@ export const Recipe = () => {
                 marginBottom: 20,
                 color: '#0a4823',
               }}>
-              Resep Masakan :
+              Resep Masakan
             </Text>
           </View>
         }
