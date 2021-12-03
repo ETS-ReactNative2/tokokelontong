@@ -4,9 +4,10 @@ import { Cart } from './Cart/Cart';
 import { Home } from './home/Home';
 import { Orders } from './Orders/Orders';
 import { User } from './User/User';
-import { BackHandler } from 'react-native';
+import { BackHandler, ToastAndroid } from 'react-native';
 import { ButtonTab } from './ButtonTab';
 import { StackRecipe } from './Recipe/StackRecipe';
+import { Recipe } from './Recipe/Recipe';
 
 const Tab = createBottomTabNavigator();
 export const colorContext = createContext({
@@ -14,19 +15,14 @@ export const colorContext = createContext({
   setColorBackground: () => {}
 })
 
-export const BottomTab = () => {
+export const BottomTab = ({route}) => {
   const [colorBackground, setColorBackground] = useState('first');
   const changeValue = {colorBackground, setColorBackground};
-
-  useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', () => {
-      setColorBackground('first');
-    });
-  });
 
     return (
       <colorContext.Provider value={changeValue}>
         <Tab.Navigator
+          backBehavior={'none'}
           screenOptions={{
             headerShown: false,
             tabBarStyle: {
@@ -55,7 +51,7 @@ export const BottomTab = () => {
           />
           <Tab.Screen
             name="Recipe"
-            component={StackRecipe}
+            component={Recipe}
             options={{
               tabBarButton: () => (
                 <ButtonTab
