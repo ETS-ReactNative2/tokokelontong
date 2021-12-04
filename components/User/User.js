@@ -162,10 +162,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     flex: 1,
-    borderBottomWidth: 1,
     paddingBottom: 10,
     paddingTop: 8,
-    borderColor: '#acd792',
     marginBottom: 10,
   },
   box2: {
