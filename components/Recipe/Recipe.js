@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/core';
 import React, { useContext, useEffect } from 'react';
 import { BackHandler, FlatList, Image, Text, View} from 'react-native';
+import { colors } from '../../src/config/colors';
 import { colorContext } from '../BottomTab';
 import { ListHeaderRecipe } from './ListHeaderRecipe';
 
@@ -73,16 +74,6 @@ const data = [
   },
 ];
 export const Recipe = () => {
-  const navigations = useNavigation();
-  // const {colorBackground, setColorBackground} = useContext(colorContext);
-
-  // useEffect(() => {
-  //     const sub = navigations.addListener('focus', () => {
-  //       setColorBackground('second');
-  //       console.log('focus recipe');
-  //     })
-  // }, [navigations]);
-  
   return (
     <View
       style={{
@@ -91,7 +82,7 @@ export const Recipe = () => {
       }}>
       <View
         style={{
-          backgroundColor: '#acd792',
+          backgroundColor: colors.forestGreenCrayolan,
           height: 50,
           justifyContent: 'center',
           alignItems: 'center',
@@ -171,6 +162,8 @@ const ItemVertical = ({item}) => {
         style={{
           flex: 1,
           marginRight: 5,
+          justifyContent: 'space-evenly',
+          height: '100%'
         }}>
         <Text
           style={{
@@ -178,14 +171,13 @@ const ItemVertical = ({item}) => {
             fontSize: 16,
             color: '#656565',
           }}>
-          Resep {item.resep}
+          Resep {`${item.resep.slice(0,15)}...`}
         </Text>
         <Text
           style={{
             fontFamily: 'Aesthet Nova Regular',
             fontSize: 14,
             color: '#656565',
-            marginBottom: 5,
           }}>
           by : {item.by}
         </Text>
@@ -193,7 +185,7 @@ const ItemVertical = ({item}) => {
           style={{
             fontFamily: 'Aesthet Nova Regular',
             fontSize: 14,
-            color: '#acd792',
+            color: colors.forestGreenCrayolan,
           }}>
           Total Resep : {item.total}
         </Text>
