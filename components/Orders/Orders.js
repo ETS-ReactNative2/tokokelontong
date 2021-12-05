@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { colors } from '../../src/colors';
 
 const data = [
   {
@@ -108,7 +109,7 @@ const Item = ({item}) => {
       </View>
       <View style={styles.footer}>
         <View style={styles.boxKurir}>
-          <Icon name="truck" color="#acd792" size={24} />
+          <Icon name="truck" color={colors.darkSpringGreen} size={20} />
           <Text style={styles.kurir}>{item.kurir}</Text>
         </View>
         <TouchableOpacity style={styles.boxDetail}>
@@ -121,7 +122,7 @@ const Item = ({item}) => {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#acd792',
+    backgroundColor: colors.grannySmithApple,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -129,11 +130,11 @@ const styles = StyleSheet.create({
   textHeader: {
     fontSize: 19,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#fff',
+    color: colors.white,
   },
   containerItem: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     padding: 10,
     marginTop: 10,
   },
@@ -145,25 +146,25 @@ const styles = StyleSheet.create({
   namaPenjual: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
     marginLeft: 10,
   },
   statusPengiriman: {
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#acd792',
+    color: colors.darkSpringGreen,
   },
   bodyItem: {
     flexDirection: 'row',
     marginTop: 20,
     borderBottomWidth: 0.5,
     paddingBottom: 20,
-    borderColor: '#acd792',
+    borderColor: colors.darkSpringGreen,
   },
   boxImage: {
     borderWidth: 1,
     marginLeft: 5,
-    borderColor: '#acd792',
+    borderColor: colors.darkSpringGreen,
     borderRadius: 5,
   },
   image: {
@@ -180,26 +181,26 @@ const styles = StyleSheet.create({
   order: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
   },
   boxVarian: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   varian: {
     fontSize: 13,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
   },
   jumlah: {
-    fontSize: 13,
+    fontSize: 15,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
   },
   harga: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#acd792',
+    color: colors.darkSpringGreen,
     textAlign: 'right',
   },
   boxProduk: {
@@ -209,12 +210,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderBottomWidth: 0.5,
-    borderColor: '#acd792',
+    borderColor: colors.darkSpringGreen,
   },
   jumlahProduk: {
-    fontSize: 13,
+    fontSize: 15,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
   },
   boxPesanan: {
     flexDirection: 'row',
@@ -222,25 +223,24 @@ const styles = StyleSheet.create({
   titleTotal: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
   },
   totalPesanan: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#acd792',
+    color: colors.darkSpringGreen,
   },
   titlePesanan: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: colors.dimGray,
   },
   footer: {
     marginLeft: 5,
     paddingVertical: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    borderBottomWidth: 0.5,
-    borderColor: '#acd792',
+    borderColor: colors.darkSpringGreen,
     justifyContent: 'space-between',
   },
   boxKurir: {
@@ -248,13 +248,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   kurir: {
-    fontSize: 15,
+    fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#acd792',
-    marginLeft: 10,
+    color: colors.darkSpringGreen,
+    marginLeft: 5,
   },
   boxDetail: {
-    backgroundColor: '#acd792',
+    backgroundColor: colors.darkSpringGreen,
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 5,
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
   detail: {
     fontSize: 15,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#fff',
+    color: colors.white,
     fontWeight: '700',
   },
 });
