@@ -1,7 +1,8 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { FlatList, Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View} from 'react-native';
+import { Button, FlatList, Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { colors } from '../../src/colors';
+import { colors } from '../../src/config/colors';
 
 const data = [
   {
@@ -57,7 +58,9 @@ const data = [
   },
 ];
 
-export const Orders = () => {
+export const Orders = ({}) => {
+  const navigation = useNavigation();
+
   const renderItem = ({item}) => <Item item={item} />;
   return (
     <View
@@ -81,15 +84,18 @@ export const Orders = () => {
 };
 
 const Item = ({item}) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.containerItem}>
       <View style={styles.headerItem}>
         <Text style={styles.namaPenjual}>{item.namaPenjual}</Text>
-        <Text style={styles.statusPengiriman}>{item.statusPengiriman === 0 ? 'Dalam Pengiriman' : 'Selesai'}</Text>
+        <Text style={styles.statusPengiriman}>
+          {item.statusPengiriman === 0 ? 'Dalam Pengiriman' : 'Selesai'}
+        </Text>
       </View>
       <View style={styles.bodyItem}>
         <View style={styles.boxImage}>
-          <Image source={{uri: item.image}}style={styles.image} />
+          <Image source={{uri: item.image}} style={styles.image} />
         </View>
         <View style={styles.boxOrder}>
           <Text style={styles.order}>{item.order}</Text>
@@ -103,16 +109,18 @@ const Item = ({item}) => {
       <View style={styles.boxProduk}>
         <Text style={styles.jumlahProduk}>{item.produk} produk</Text>
         <View style={styles.boxPesanan}>
-          <Text style={styles.titleTotal}>Total Pesanan:{' '}</Text>
-          <Text style={styles.totalPesanan}>Rp. {item.jumlah * item.harga}</Text>
+          <Text style={styles.titleTotal}>Total Pesanan: </Text>
+          <Text style={styles.totalPesanan}>
+            Rp. {item.jumlah * item.harga}
+          </Text>
         </View>
       </View>
       <View style={styles.footer}>
         <View style={styles.boxKurir}>
-          <Icon name="truck" color={colors.darkSpringGreen} size={20} />
+          <Icon name="truck" color={colors.forestGreenCrayolan} size={20} />
           <Text style={styles.kurir}>{item.kurir}</Text>
         </View>
-        <TouchableOpacity style={styles.boxDetail}>
+        <TouchableOpacity style={styles.boxDetail} onPress={() => navigation.navigate('DetailOrders')}>
           <Text style={styles.detail}>Detail</Text>
         </TouchableOpacity>
       </View>
@@ -122,7 +130,7 @@ const Item = ({item}) => {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: colors.grannySmithApple,
+    backgroundColor: colors.forestGreenCrayolan,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -152,19 +160,19 @@ const styles = StyleSheet.create({
   statusPengiriman: {
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.darkSpringGreen,
+    color: colors.forestGreenCrayolan,
   },
   bodyItem: {
     flexDirection: 'row',
     marginTop: 20,
     borderBottomWidth: 0.5,
     paddingBottom: 20,
-    borderColor: colors.darkSpringGreen,
+    borderColor: colors.forestGreenCrayolan,
   },
   boxImage: {
     borderWidth: 1,
     marginLeft: 5,
-    borderColor: colors.darkSpringGreen,
+    borderColor: colors.forestGreenCrayolan,
     borderRadius: 5,
   },
   image: {
@@ -200,22 +208,22 @@ const styles = StyleSheet.create({
   harga: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.darkSpringGreen,
+    color: colors.forestGreenCrayolan,
     textAlign: 'right',
   },
   boxProduk: {
-    marginLeft: 5,
     paddingVertical: 15,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     borderBottomWidth: 0.5,
-    borderColor: colors.darkSpringGreen,
+    borderColor: colors.forestGreenCrayolan,
   },
   jumlahProduk: {
     fontSize: 15,
     fontFamily: 'Aesthet Nova Regular',
     color: colors.dimGray,
+    marginLeft: 5
   },
   boxPesanan: {
     flexDirection: 'row',
@@ -228,7 +236,7 @@ const styles = StyleSheet.create({
   totalPesanan: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.darkSpringGreen,
+    color: colors.forestGreenCrayolan,
   },
   titlePesanan: {
     fontSize: 16,
@@ -250,11 +258,11 @@ const styles = StyleSheet.create({
   kurir: {
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.darkSpringGreen,
+    color: colors.forestGreenCrayolan,
     marginLeft: 5,
   },
   boxDetail: {
-    backgroundColor: colors.darkSpringGreen,
+    backgroundColor: colors.forestGreenCrayolan,
     paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 5,
