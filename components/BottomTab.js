@@ -8,6 +8,7 @@ import { BackHandler, ToastAndroid } from 'react-native';
 import { ButtonTab } from './ButtonTab';
 import { StackRecipe } from './Recipe/StackRecipe';
 import { Recipe } from './Recipe/Recipe';
+import { colors } from '../src/config/colors';
 
 const Tab = createBottomTabNavigator();
 export const colorContext = createContext({
@@ -27,15 +28,12 @@ export const BottomTab = ({route}) => {
             headerShown: false,
             tabBarStyle: {
               height: 60,
-              backgroundColor: '#acd792',
+              backgroundColor: colors.forestGreenCrayolan,
             },
             tabBarIconStyle: {
               marginTop: 5,
             },
-            tabBarInactiveTintColor: '#656565',
-            tabBarActiveTintColor: '#fff',
-          }}
-          >
+          }}>
           <Tab.Screen
             name="Home"
             component={Home}
