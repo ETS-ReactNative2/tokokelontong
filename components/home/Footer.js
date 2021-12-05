@@ -96,7 +96,7 @@ const Item = ({item}) => (
     }}>
     <View
       style={{
-        backgroundColor: colors.grannySmithApple,
+        backgroundColor: colors.forestGreenCrayolan,
         height: 120,
         width: 250,
         borderRadius: 15,
@@ -111,6 +111,7 @@ const Item = ({item}) => (
           style={{
             fontSize: 18,
             fontFamily: 'Aesthet Nova Regular',
+            color: colors.white
           }}>
           {item.title}
         </Text>
