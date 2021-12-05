@@ -68,33 +68,37 @@ export const DetailOrders = () => {
             }}>
             Status pesanan Anda
           </Text>
-          <Timeline
-            data={data}
-            innerCircle={'dot'}
-            lineColor={colors.forestGreenCrayolan}
-            circleColor={colors.forestGreenCrayolan}
-            timeStyle={{
-              backgroundColor: '#ff9797',
-              textAlign: 'center',
-              color: colors.white,
-              paddingHorizontal: 2,
-              paddingVertical: 3,
-              fontFamily: 'Aesthet Nova Regular',
-              borderRadius: 8,
-              fontSize: 12,
-            }}
-            descriptionStyle={{
-              borderBottomWidth: 0.5,
-              paddingBottom: 15,
-              fontFamily: 'Aesthet Nova Regular',
-              color: colors.darkSpringGreen,
-              borderBottomColor: colors.forestGreenCrayolan,
-            }}
-            titleStyle={{
-              color: colors.dimGray,
-              fontFamily: 'Aesthet Nova Regular',
-            }}
-          />
+          <View style={{
+            flex: 1
+          }}>
+            <Timeline
+              data={data}
+              innerCircle={'dot'}
+              lineColor={colors.forestGreenCrayolan}
+              circleColor={colors.forestGreenCrayolan}
+              timeStyle={{
+                backgroundColor: '#ff9797',
+                textAlign: 'center',
+                color: colors.white,
+                paddingHorizontal: 2,
+                paddingVertical: 3,
+                fontFamily: 'Aesthet Nova Regular',
+                borderRadius: 8,
+                fontSize: 12,
+              }}
+              descriptionStyle={{
+                borderBottomWidth: 0.5,
+                paddingBottom: 15,
+                fontFamily: 'Aesthet Nova Regular',
+                color: colors.darkSpringGreen,
+                borderBottomColor: colors.forestGreenCrayolan,
+              }}
+              titleStyle={{
+                color: colors.dimGray,
+                fontFamily: 'Aesthet Nova Regular',
+              }}
+            />
+          </View>
         </View>
       </View>
     );
