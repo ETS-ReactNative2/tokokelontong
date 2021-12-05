@@ -59,7 +59,6 @@ const Item = ({item}) => (
       paddingHorizontal: 10,
       paddingTop: 15,
       paddingBottom: 10,
-      borderRadius: 10,
       elevation: 4,
       shadowColor: 'green',
       shadowOffset: {
@@ -74,6 +73,7 @@ const Item = ({item}) => (
       marginLeft: 1,
       borderWidth: 0.3,
       borderColor: '#acd792',
+      borderRadius: 10,
     }}>
     <Image
       style={{
