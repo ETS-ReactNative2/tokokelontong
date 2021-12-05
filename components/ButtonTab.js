@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import { colorContext } from './BottomTab';
+import { colors } from '../src/config/colors';
 
 export const ButtonTab = ({position, navigations, icon}) => {
   const navigation = useNavigation();
@@ -15,7 +16,8 @@ export const ButtonTab = ({position, navigations, icon}) => {
   return (
     <TouchableHighlight
       style={{
-        backgroundColor: colorBackground === position ? '#fff' : 'transparent',
+        backgroundColor:
+          colorBackground === position ? colors.white : 'transparent',
         borderRadius: 10,
         marginBottom: 5,
         marginTop: 5,
@@ -26,17 +28,28 @@ export const ButtonTab = ({position, navigations, icon}) => {
         setColorBackground(position);
         navigation.navigate(navigations);
       }}
-      underlayColor="#acd792">
+      underlayColor={colors.forestGreenCrayolan}>
       <View
         style={{
           justifyContent: 'center',
           alignItems: 'center',
           paddingVertical: 5,
         }}>
-        <Icon name={icon} size={25} color={'#656565'} />
+        <Icon
+          name={icon}
+          size={25}
+          color={
+            colorBackground === position
+              ? colors.forestGreenCrayolan
+              : colors.white
+          }
+        />
         <Text
           style={{
-            color: '#656565',
+            color:
+              colorBackground === position
+                ? colors.forestGreenCrayolan
+                : colors.white,
             marginBottom: 5,
             fontFamily: 'Aesthet Nova Regular',
             fontSize: 12,

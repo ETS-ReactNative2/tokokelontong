@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/core';
 import React, { useContext, useEffect, useState } from 'react';
 import {BackHandler, Button, Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { colors } from '../../src/colors';
+import { colors } from '../../src/config/colors';
 
 export const User = () => {
   let colorPencil = '#656565';
@@ -89,10 +89,10 @@ export const User = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
   },
   header: {
-    backgroundColor: colors.grannySmithApple,
+    backgroundColor: colors.forestGreenCrayolan,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -100,10 +100,10 @@ const styles = StyleSheet.create({
   textHeader: {
     fontSize: 19,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#fff',
+    color: colors.white,
   },
   profile: {
-    backgroundColor: colors.grannySmithApple,
+    backgroundColor: colors.forestGreenCrayolan,
     width: Dimensions.get('screen').width,
     alignItems: 'center',
     borderBottomLeftRadius: 20,
@@ -130,13 +130,13 @@ const styles = StyleSheet.create({
   name: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 19,
-    color: colors.darkSpringGreen,
+    color: colors.white,
     marginTop: 15,
   },
   username: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: colors.darkSpringGreen,
+    color: colors.white,
   },
   boxFollow: {
     marginTop: 20,
@@ -147,12 +147,12 @@ const styles = StyleSheet.create({
   follower: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 13,
-    color: colors.darkSpringGreen,
+    color: colors.white,
   },
   follow: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 13,
-    color: colors.darkSpringGreen,
+    color: colors.white,
   },
   scroll: {
     padding: 15,
