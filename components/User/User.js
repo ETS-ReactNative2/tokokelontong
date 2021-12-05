@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/core';
 import React, { useContext, useEffect, useState } from 'react';
 import {BackHandler, Button, Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { colors } from '../../src/colors';
 
 export const User = () => {
   let colorPencil = '#656565';
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    backgroundColor: '#acd792',
+    backgroundColor: colors.grannySmithApple,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   profile: {
-    backgroundColor: '#acd792',
+    backgroundColor: colors.grannySmithApple,
     width: Dimensions.get('screen').width,
     alignItems: 'center',
     borderBottomLeftRadius: 20,
@@ -112,7 +113,6 @@ const styles = StyleSheet.create({
   },
   boxImage: {
     borderRadius: 50,
-    shadowColor: '#fff',
     shadowOffset: {
       width: 10,
       height: 10,
@@ -125,19 +125,18 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderWidth: 3,
-    borderColor: '#fff',
     borderRadius: 50,
   },
   name: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 19,
-    color: '#fff',
+    color: colors.darkSpringGreen,
     marginTop: 15,
   },
   username: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: '#fff',
+    color: colors.darkSpringGreen,
   },
   boxFollow: {
     marginTop: 20,
@@ -148,12 +147,12 @@ const styles = StyleSheet.create({
   follower: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 13,
-    color: '#fff',
+    color: colors.darkSpringGreen,
   },
   follow: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 13,
-    color: '#fff',
+    color: colors.darkSpringGreen,
   },
   scroll: {
     padding: 15,
@@ -176,12 +175,12 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 15,
-    color: '#656565',
+    color: colors.dimGray,
     marginBottom: 5,
   },
   email: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: '#acd792',
+    color: colors.seaGreen,
   },
 });
