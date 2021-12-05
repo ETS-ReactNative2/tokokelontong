@@ -1,5 +1,6 @@
 import React from 'react';
-import {Dimensions, ScrollView, StatusBar, View} from 'react-native';
+import {Dimensions, ScrollView, StatusBar, StyleSheet, View} from 'react-native';
+import { colors } from '../../src/config/colors';
 import { Body } from './Body';
 import { Footer } from './Footer';
 import { Header } from './Header';
@@ -7,23 +8,10 @@ import { Search } from './Search';
 
 export const Home = () => {
     return (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#fff',
-        }}>
-        <StatusBar
-          animated={true}
-          barStyle="light-content"
-          backgroundColor="#acd792"
-        />
+      <View style={styles.container}>
+        <StatusBar animated={true} barStyle="light-content" backgroundColor={colors.forestGreenCrayolan} />
         <View
-          style={{
-            height: 130,
-            width: Dimensions.get('screen').width,
-            backgroundColor: '#acd792',
-            borderBottomLeftRadius: 30,
-          }}
+          style={styles.boxHeader}
         />
         <Search />
         <ScrollView showsVerticalScrollIndicator={false} >
@@ -34,3 +22,16 @@ export const Home = () => {
       </View>
     );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  boxHeader: {
+    height: 130,
+    width: Dimensions.get('screen').width,
+    backgroundColor: colors.forestGreenCrayolan,
+    borderBottomLeftRadius: 30,
+  },
+});

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, Image, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { colors } from '../../src/config/colors';
 
 const data = [
   {
@@ -95,7 +96,7 @@ const Item = ({item}) => (
     }}>
     <View
       style={{
-        backgroundColor: '#acd792',
+        backgroundColor: colors.grannySmithApple,
         height: 120,
         width: 250,
         borderRadius: 15,
@@ -148,9 +149,9 @@ const Item = ({item}) => (
           <Text
             style={{
               fontFamily: 'Aesthet Nova Regular',
-              fontSize: 18
+              fontSize: 18,
             }}>
-            1
+            0
           </Text>
           <View
             style={{
