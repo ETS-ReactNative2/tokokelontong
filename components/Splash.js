@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#acd792',
+    backgroundColor: colors.forestGreenCrayolan,
   },
   image: {
     height: 100,
