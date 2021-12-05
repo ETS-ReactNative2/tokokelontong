@@ -5,19 +5,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {BottomTab, colorContext} from './components/BottomTab';
 import { DetailRecipe } from './components/Recipe/DetailRecipe';
 import { BackHandler } from 'react-native';
+import { DetailOrders } from './components/Orders/DetailOrders';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  useEffect(() => {
-    BackHandler.addEventListener('hardwareBackPress', () => {
-      console.log('back dari App');
-    });
-    return () => {
-      BackHandler.removeEventListener();
-    };
-  }, []);
-
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -26,7 +18,7 @@ const App = () => {
         }}>
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="BottomTab" component={BottomTab} />
-        <Stack.Screen name="DetailRecipe" component={DetailRecipe} />
+        <Stack.Screen name="DetailOrders" component={DetailOrders} />
       </Stack.Navigator>
     </NavigationContainer>
   );
