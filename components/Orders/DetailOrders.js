@@ -68,9 +68,10 @@ export const DetailOrders = () => {
             }}>
             Status pesanan Anda
           </Text>
-          <View style={{
-            flex: 1
-          }}>
+          <View
+            style={{
+              flex: 1,
+            }}>
             <Timeline
               data={data}
               innerCircle={'dot'}
