@@ -10,23 +10,24 @@ import {useNavigation} from '@react-navigation/core';
 import { colorContext } from './BottomTab';
 import { colors } from '../src/config/colors';
 
+const useMount = func => useEffect(() => func(), []);
+
 export const ButtonTab = ({position, navigations, icon}) => {
   const navigation = useNavigation();
   const {colorBackground, setColorBackground} = useContext(colorContext);
   const scale = useRef(new Animated.Value(0)).current;
 
   const scaleSpring = () => {
+    scale.setValue(0);
     Animated.spring(scale, {
       toValue: 1,
-      friction: 15,
+      friction: 100,
       tension: 100,
       useNativeDriver: true
     }).start();
   }
 
-  useEffect(() => {
-    scaleSpring();
-  }, []);
+  useMount(() => scaleSpring());
 
   return (
     <TouchableHighlight
@@ -42,6 +43,7 @@ export const ButtonTab = ({position, navigations, icon}) => {
       onPress={() => {
         setColorBackground(position);
         navigation.navigate(navigations);
+        scaleSpring();
       }}
       underlayColor={colors.forestGreenCrayolan}>
       <Animated.View
