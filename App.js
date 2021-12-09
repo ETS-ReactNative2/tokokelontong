@@ -1,10 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import SplashScreen from './components/Splash';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {BottomTab, colorContext} from './components/BottomTab';
-import { DetailRecipe } from './components/Recipe/DetailRecipe';
-import { BackHandler } from 'react-native';
+import {BottomTab} from './components/BottomTab';
 import { DetailOrders } from './components/Orders/DetailOrders';
 
 const Stack = createNativeStackNavigator();
