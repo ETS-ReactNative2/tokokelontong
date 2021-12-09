@@ -1,6 +1,7 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
+  Animated,
   Text,
   TouchableHighlight,
   View,
@@ -12,6 +13,20 @@ import { colors } from '../src/config/colors';
 export const ButtonTab = ({position, navigations, icon}) => {
   const navigation = useNavigation();
   const {colorBackground, setColorBackground} = useContext(colorContext);
+  const scale = useRef(new Animated.Value(0)).current;
+
+  const scaleSpring = () => {
+    Animated.spring(scale, {
+      toValue: 1,
+      friction: 15,
+      tension: 100,
+      useNativeDriver: true
+    }).start();
+  }
+
+  useEffect(() => {
+    scaleSpring();
+  }, []);
 
   return (
     <TouchableHighlight
@@ -29,11 +44,12 @@ export const ButtonTab = ({position, navigations, icon}) => {
         navigation.navigate(navigations);
       }}
       underlayColor={colors.forestGreenCrayolan}>
-      <View
+      <Animated.View
         style={{
           justifyContent: 'center',
           alignItems: 'center',
           paddingVertical: 5,
+          transform: [{scale: scale}],
         }}>
         <Icon
           name={icon}
@@ -56,7 +72,7 @@ export const ButtonTab = ({position, navigations, icon}) => {
           }}>
           {navigations}
         </Text>
-      </View>
+      </Animated.View>
     </TouchableHighlight>
   );
 };
