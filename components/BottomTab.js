@@ -41,7 +41,11 @@ export const BottomTab = ({route}) => {
               tabBarButton: () => (
                 <ButtonTab
                   navigations={'Home'}
-                  icon={'home-variant-outline'}
+                  icon={
+                    colorBackground === 'first'
+                      ? 'home-variant'
+                      : 'home-variant-outline'
+                  }
                   position={'first'}
                 />
               ),
@@ -54,7 +58,7 @@ export const BottomTab = ({route}) => {
               tabBarButton: () => (
                 <ButtonTab
                   navigations={'Recipe'}
-                  icon={'book-outline'}
+                  icon={colorBackground === 'second' ? 'book' : 'book-outline'}
                   position={'second'}
                 />
               ),
@@ -67,7 +71,7 @@ export const BottomTab = ({route}) => {
               tabBarButton: () => (
                 <ButtonTab
                   navigations={'Cart'}
-                  icon={'cart-outline'}
+                  icon={colorBackground === 'third' ? 'cart' : 'cart-outline'}
                   position={'third'}
                 />
               ),
@@ -80,7 +84,11 @@ export const BottomTab = ({route}) => {
               tabBarButton: () => (
                 <ButtonTab
                   navigations={'Orders'}
-                  icon={'shopping-outline'}
+                  icon={
+                    colorBackground === 'fourth'
+                      ? 'shopping'
+                      : 'shopping-outline'
+                  }
                   position={'fourth'}
                 />
               ),
@@ -93,7 +101,11 @@ export const BottomTab = ({route}) => {
               tabBarButton: () => (
                 <ButtonTab
                   navigations={'User'}
-                  icon={'account-outline'}
+                  icon={
+                    colorBackground === 'fifth'
+                      ? 'account'
+                      : 'account-outline'
+                  }
                   position={'fifth'}
                 />
               ),
