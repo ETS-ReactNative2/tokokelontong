@@ -46,35 +46,38 @@ export const ButtonTab = ({position, navigations, icon}) => {
         scaleSpring();
       }}
       underlayColor={colors.forestGreenCrayolan}>
-      <Animated.View
+      <View
         style={{
           justifyContent: 'center',
           alignItems: 'center',
-          paddingVertical: 5,
-          transform: [{scale: scale}],
+          paddingVertical: 5
         }}>
-        <Icon
-          name={icon}
-          size={25}
-          color={
-            colorBackground === position
-              ? colors.forestGreenCrayolan
-              : colors.white
-          }
-        />
+        <Animated.View
+          style={{
+            transform: [{scale: scale}],
+          }}>
+          <Icon
+            name={icon}
+            size={25}
+            color={
+              colorBackground === position
+                ? colors.forestGreenCrayolan
+                : colors.white
+            }
+          />
+        </Animated.View>
         <Text
           style={{
             color:
               colorBackground === position
                 ? colors.forestGreenCrayolan
                 : colors.white,
-            marginBottom: 5,
             fontFamily: 'Aesthet Nova Regular',
-            fontSize: 12,
+            fontSize: 11,
           }}>
           {navigations}
         </Text>
-      </Animated.View>
+      </View>
     </TouchableHighlight>
   );
 };
