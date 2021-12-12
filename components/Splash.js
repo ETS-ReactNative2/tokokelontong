@@ -4,18 +4,7 @@ import {Animated, Image, StyleSheet, Text, View} from 'react-native';
 import {colors} from '../src/config/colors';
 
 const SplashScreen = ({navigation}) => {
-  const scale = useRef(new Animated.Value(0)).current;
-
-  const scaleAnimated = () => {
-    Animated.spring(scale, {
-      toValue: 1,
-      friction: 15,
-      tension: 100,
-      useNativeDriver: true
-    }).start();
-  }
   useEffect(() => {
-    scaleAnimated();
     setTimeout(() => {
       navigation.dispatch(StackActions.replace('BottomTab'));
     }, 1000)
@@ -23,18 +12,12 @@ const SplashScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
-        <Animated.View
-          style={{
-            transform: [{scale: scale}],
-            alignItems: 'center',
-          }}>
-          <Image
-            source={require('../src/image/logosplash.png')}
-            style={styles.image}
-          />
-          <Text style={styles.text}>Toko</Text>
-          <Text style={styles.text}>Kelontong</Text>
-        </Animated.View>
+        <Image
+          source={require('../src/image/logosplash.png')}
+          style={styles.image}
+        />
+        <Text style={styles.text}>Toko</Text>
+        <Text style={styles.text}>Kelontong</Text>
       </View>
     );
 }
