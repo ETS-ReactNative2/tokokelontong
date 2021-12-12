@@ -1,12 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { Cart } from './Cart/Cart';
 import { Home } from './home/Home';
 import { Orders } from './Orders/Orders';
 import { User } from './User/User';
-import { BackHandler, ToastAndroid } from 'react-native';
 import { ButtonTab } from './ButtonTab';
-import { StackRecipe } from './Recipe/StackRecipe';
 import { Recipe } from './Recipe/Recipe';
 import { colors } from '../src/config/colors';
 
@@ -16,7 +14,7 @@ export const colorContext = createContext({
   setColorBackground: () => {}
 })
 
-export const BottomTab = ({route}) => {
+export const BottomTab = () => {
   const [colorBackground, setColorBackground] = useState('first');
   const changeValue = {colorBackground, setColorBackground};
 
@@ -29,9 +27,6 @@ export const BottomTab = ({route}) => {
             tabBarStyle: {
               height: 60,
               backgroundColor: colors.forestGreenCrayolan,
-            },
-            tabBarIconStyle: {
-              marginTop: 5,
             },
           }}>
           <Tab.Screen
