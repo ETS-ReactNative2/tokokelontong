@@ -46,8 +46,18 @@ const data = [
   },
 ];
 
+const total = () => {
+  let total = 0;
+  data.map(value => {
+    total += value.jumlah * value.harga
+  })
+  return total;
+}
+
 export const Cart = () => {
-    return (
+  const [all, setAll] = useState(null);
+
+  return (
       <View
         style={{
           flex: 1,
@@ -74,7 +84,7 @@ export const Cart = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
             backgroundColor: '#fff',
-            padding: 10
+            padding: 10,
           }}>
           <View
             style={{
@@ -99,9 +109,82 @@ export const Cart = () => {
           renderItem={renderItem}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
-            paddingVertical: 5
+            paddingVertical: 5,
           }}
         />
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingVertical: 5,
+            justifyContent: 'space-between',
+            backgroundColor: '#fff'
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <RadioButton
+              value="first"
+              status={all === 'all' ? 'checked' : 'unchecked'}
+              onPress={() => setAll('all')}
+              color={colors.dimGray}
+            />
+            <Text
+              style={{
+                marginLeft: 5,
+                fontSize: 14,
+                fontFamily: 'Aesthet Nova Regular',
+                color: colors.dimGray,
+              }}>
+              Semua
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginHorizontal: 5,
+            }}>
+            <View style={{
+              alignItems: 'flex-end'
+            }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  fontFamily: 'Aesthet Nova Regular',
+                  color: colors.dimGray,
+                }}>
+                Total
+              </Text>
+              <Text
+                style={{
+                  fontSize: 14,
+                  fontFamily: 'Aesthet Nova Regular',
+                  color: 'red',
+                }}>
+                Rp. {total()}
+              </Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: colors.darkSpringGreen,
+                marginLeft: 10,
+                padding: 10,
+                borderRadius: 10,
+              }}>
+              <Text
+                style={{
+                  fontSize: 14,
+                  fontFamily: 'Aesthet Nova Regular',
+                  color: colors.white,
+                }}>
+                Checkout
+              </Text>
+            </View>
+          </View>
+        </View>
       </View>
     );
 }
@@ -114,92 +197,121 @@ const Item = ({item}) => {
   const [checked, setChecked] = useState(null);
 
   return (
-    <View style={{
-      backgroundColor: '#fff',
-      marginBottom: 5
-    }}>
+    <View
+      style={{
+        backgroundColor: '#fff',
+        marginBottom: 5,
+        padding: 5,
+      }}>
       <View
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          marginTop: 5
+          justifyContent: 'space-between',
+          paddingBottom: 5,
+          borderBottomWidth: 0.5,
+          borderColor: '#eeeeee',
         }}>
-        <RadioButton
-          value="first"
-          status={checked === 'first' ? 'checked' : 'unchecked'}
-          onPress={() => setChecked('first')}
-          color={colors.dimGray}
-        />
-        <Icon name="store" color={colors.dimGray} size={25} />
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+          <RadioButton
+            value="first"
+            status={checked === 'first' ? 'checked' : 'unchecked'}
+            onPress={() => setChecked('first')}
+            color={colors.dimGray}
+          />
+          <Icon name="store" color={colors.dimGray} size={22} />
+          <Text
+            style={{
+              fontSize: 15,
+              fontFamily: 'Aesthet Nova Regular',
+              color: colors.dimGray,
+              marginLeft: 10,
+              marginRight: 5,
+            }}>
+            {item.namaPenjual}
+          </Text>
+          <Icon name="chevron-right" color={colors.dimGray} size={22} />
+        </View>
         <Text
           style={{
-            fontSize: 17,
+            fontSize: 12,
             fontFamily: 'Aesthet Nova Regular',
             color: colors.dimGray,
-            marginLeft: 10,
-            marginRight: 5,
+            marginRight: 10
           }}>
-          {item.namaPenjual}
+          Ubah
         </Text>
-        <Icon name="chevron-right" color={colors.dimGray} size={25} />
       </View>
       <View
         style={{
-          marginTop: 10,
           flexDirection: 'row',
-          alignItems: 'center',
-          marginBottom: 20
+          paddingTop: 15,
+          borderBottomWidth: 0.5,
+          paddingBottom: 10,
+          borderColor: '#eeeeee',
         }}>
-        <RadioButton
-          value="first"
-          status={checked === 'first' ? 'checked' : 'unchecked'}
-          onPress={() => setChecked('first')}
-          color={colors.dimGray}
-        />
-        <Image
-          source={{
-            uri: item.image
-          }}
-          style={{
-            width: 100,
-            height: 100,
-            borderRadius: 10,
-            marginLeft: 5,
-            marginRight: 15,
-          }}
-        />
-        <View
-          style={{
-            alignSelf: 'flex-start',
-            marginTop: 10,
-            flex: 1,
-            marginRight: 10
-          }}>
+        <View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <RadioButton
+              value="first"
+              status={checked === 'first' ? 'checked' : 'unchecked'}
+              onPress={() => setChecked('first')}
+              color={colors.dimGray}
+            />
+            <Image
+              source={{
+                uri: item.image,
+              }}
+              style={{
+                width: 75,
+                height: 75,
+                marginRight: 15,
+                borderRadius: 5,
+              }}
+            />
+          </View>
+        </View>
+        <View>
           <Text
             style={{
-              fontSize: 17,
+              fontSize: 15,
               fontFamily: 'Aesthet Nova Regular',
               color: colors.dimGray,
             }}>
             {item.order}
           </Text>
-          <Text
-            style={{
-              fontSize: 13,
-              fontFamily: 'Aesthet Nova Regular',
-              color: colors.dimGray,
-            }}>
-            {item.varian}
-          </Text>
           <View
             style={{
-              marginTop: 25,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
+              marginTop: 10,
+              alignItems: 'flex-start',
             }}>
             <Text
               style={{
-                fontSize: 17,
+                fontSize: 11,
+                fontFamily: 'Aesthet Nova Regular',
+                color: colors.dimGray,
+                backgroundColor: '#fafafa',
+                padding: 5
+              }}>
+              Varian : {item.varian}
+            </Text>
+          </View>
+          <View
+            style={{
+              marginTop: 20,
+              marginBottom: 10,
+            }}>
+            <Text
+              style={{
+                fontSize: 16,
                 fontFamily: 'Aesthet Nova Regular',
                 color: 'red',
               }}>
@@ -208,42 +320,97 @@ const Item = ({item}) => {
             <View
               style={{
                 flexDirection: 'row',
+                marginTop: 15,
               }}>
               <View
                 style={{
-                  backgroundColor: colors.dimGray,
                   width: 20,
                   height: 20,
-                  marginRight: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  borderRadius: 3,
+                  borderWidth: 0.5,
+                  borderColor: '#eeeeee',
                 }}>
-                <Icon name="minus" color={'#fff'} size={18} />
+                <Icon name="minus" color={'#000000'} size={15} />
               </View>
               <Text
                 style={{
                   fontSize: 15,
                   fontFamily: 'Aesthet Nova Regular',
                   color: colors.dimGray,
+                  paddingHorizontal: 15,
+                  borderTopWidth: 0.5,
+                  borderBottomWidth: 0.5,
+                  borderColor: '#eeeeee',
                 }}>
                 {item.jumlah}
               </Text>
               <View
                 style={{
-                  backgroundColor: colors.dimGray,
                   width: 20,
                   height: 20,
                   justifyContent: 'center',
                   alignItems: 'center',
-                  borderRadius: 3,
-                  marginLeft: 10
+                  borderWidth: 0.5,
+                  borderColor: '#eeeeee',
                 }}>
-                <Icon name="plus" color={'#fff'} size={18} />
+                <Icon name="plus" color={'#000000'} size={15} />
               </View>
             </View>
           </View>
         </View>
+      </View>
+      <View
+        style={{
+          paddingVertical: 5,
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingVertical: 10,
+          borderBottomWidth: 0.5,
+          borderColor: '#eeeeee',
+          paddingHorizontal: 10
+        }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+          <Icon
+            name="ticket-confirmation-outline"
+            color={colors.darkSpringGreen}
+            size={15}
+          />
+          <Text
+            style={{
+              marginLeft: 10,
+              fontSize: 12,
+              fontFamily: 'Aesthet Nova Regular',
+              color: colors.dimGray,
+            }}>
+            Voucher Diskon s/d Rp10RB tersedia
+          </Text>
+        </View>
+        <Icon name="chevron-right" color={colors.dimGray} size={15} />
+      </View>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          paddingVertical: 15,
+          paddingHorizontal: 10
+        }}>
+        <Icon name="truck" color={colors.darkSpringGreen} size={15} />
+        <Text
+          style={{
+            marginLeft: 10,
+            flex: 1,
+            fontSize: 12,
+            fontFamily: 'Aesthet Nova Regular',
+            color: colors.dimGray,
+          }}>
+          Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...
+        </Text>
       </View>
     </View>
   );
