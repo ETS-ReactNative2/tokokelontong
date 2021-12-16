@@ -13,7 +13,7 @@ const SplashScreen = ({navigation}) => {
     return (
       <View style={styles.container}>
         <Image
-          source={require('../../src/image/logosplash.png')}
+          source={require('../../assets/image/logosplash.png')}
           style={styles.image}
         />
         <Text style={styles.text}>Toko</Text>
