@@ -73,7 +73,7 @@ const data = [
     uri: 'https://img-global.cpcdn.com/recipes/30257c7da66c9602/680x482cq70/cumi-masak-hitam-foto-resep-utama.webp',
   },
 ];
-export const Recipe = () => {
+const Recipe = () => {
   return (
     <View
       style={{
@@ -193,3 +193,5 @@ const ItemVertical = ({item}) => {
     </View>
   );
 };
+
+export default Recipe;

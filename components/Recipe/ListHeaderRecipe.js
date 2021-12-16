@@ -86,3 +86,5 @@ const ItemHorizontal = ({item}) => {
     </ImageBackground>
   );
 };
+
+export default ListHeaderRecipe;
