@@ -4,7 +4,7 @@ import {BackHandler, Button, Dimensions, Image, ScrollView, StyleSheet, Text, Vi
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors } from '../../src/config/colors';
 
-export const User = () => {
+const User = () => {
   let colorPencil = '#656565';
   let colorIcon = '#656565';
 
@@ -184,3 +184,5 @@ const styles = StyleSheet.create({
     color: colors.seaGreen,
   },
 });
+
+export default User;
