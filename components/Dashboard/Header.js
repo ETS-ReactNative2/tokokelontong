@@ -4,23 +4,23 @@ import {FlatList, Image, Text, View} from 'react-native';
 const data = [
   {
     title: 'Sayuran',
-    image: require('../../src/image/home/veggie.png'),
+    image: require('../../assets/image/home/veggie.png'),
   },
   {
     title: 'Jajanan',
-    image: require('../../src/image/home/snack.png'),
+    image: require('../../assets/image/home/snack.png'),
   },
   {
     title: 'Alat Tulis',
-    image: require('../../src/image/home/stationery.png'),
+    image: require('../../assets/image/home/stationery.png'),
   },
   {
     title: 'Obat',
-    image: require('../../src/image/home/medical.png'),
+    image: require('../../assets/image/home/medical.png'),
   },
   {
     title: 'Online Pay',
-    image: require('../../src/image/home/payment.png'),
+    image: require('../../assets/image/home/payment.png'),
   },
 ];
 
