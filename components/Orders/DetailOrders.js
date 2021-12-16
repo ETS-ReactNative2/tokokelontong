@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  ScrollView,
-    Text,
+  Text,
   View,
 } from 'react-native';
 import { colors } from '../../src/config/colors';
@@ -30,7 +29,7 @@ const data = [
   },
 ]
 
-export const DetailOrders = () => { 
+const DetailOrders = () => { 
     return (
       <View
         style={{
@@ -104,3 +103,5 @@ export const DetailOrders = () => {
       </View>
     );
 }
+
+export default DetailOrders;

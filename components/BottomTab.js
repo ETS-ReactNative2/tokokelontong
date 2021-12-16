@@ -1,12 +1,12 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { createContext, useState } from 'react';
-import { Cart } from './Cart/Cart';
 import { Home } from './home/Home';
-import { Orders } from './Orders/Orders';
+import Orders from './Orders/Orders';
 import { User } from './User/User';
-import { ButtonTab } from './ButtonTab';
 import { Recipe } from './Recipe/Recipe';
 import { colors } from '../src/config/colors';
+import { ButtonTab } from '.';
+import { Cart } from './Cart';
 
 const Tab = createBottomTabNavigator();
 export const colorContext = createContext({
@@ -14,7 +14,7 @@ export const colorContext = createContext({
   setColorBackground: () => {}
 })
 
-export const BottomTab = () => {
+const BottomTab = () => {
   const [colorBackground, setColorBackground] = useState('first');
   const changeValue = {colorBackground, setColorBackground};
 
@@ -110,3 +110,5 @@ export const BottomTab = () => {
       </colorContext.Provider>
     );
 }
+
+export default BottomTab;

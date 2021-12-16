@@ -12,7 +12,7 @@ import { colors } from '../src/config/colors';
 
 const useMount = func => useEffect(() => func(), []);
 
-export const ButtonTab = ({position, navigations, icon}) => {
+const ButtonTab = ({position, navigations, icon}) => {
   const navigation = useNavigation();
   const {colorBackground, setColorBackground} = useContext(colorContext);
   const scale = useRef(new Animated.Value(0)).current;
@@ -81,3 +81,5 @@ export const ButtonTab = ({position, navigations, icon}) => {
     </TouchableHighlight>
   );
 };
+
+export default ButtonTab;

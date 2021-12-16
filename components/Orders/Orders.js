@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { Button, FlatList, Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View} from 'react-native';
+import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors } from '../../src/config/colors';
 
@@ -58,9 +58,7 @@ const data = [
   },
 ];
 
-export const Orders = ({}) => {
-  const navigation = useNavigation();
-
+const Orders = ({}) => {
   const renderItem = ({item}) => <Item item={item} />;
   return (
     <View
@@ -274,3 +272,5 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+
+export default Orders;
