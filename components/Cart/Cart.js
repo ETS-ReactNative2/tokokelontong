@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import Icon  from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ItemCart } from '.';
@@ -59,52 +59,11 @@ const Cart = () => {
   const [all, setAll] = useState(null);
 
   return (
-    <View
-      style={{
-        flex: 1,
-      }}>
-      <View
-        style={{
-          backgroundColor: colors.forestGreenCrayolan,
-          height: 50,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <Text
-          style={{
-            fontSize: 19,
-            fontFamily: 'Aesthet Nova Regular',
-            color: colors.white,
-          }}>
-          Cart
-        </Text>
+    <View style={styles.container}>
+      <View style={styles.containerHeader}>
+        <Text style={styles.textHeader}>Cart</Text>
       </View>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          backgroundColor: '#fff',
-          padding: 10,
-        }}>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <Icon name="google-maps" color={'red'} size={22} />
-          <Text
-            style={{
-              marginLeft: 10,
-              fontSize: 14,
-              fontFamily: 'Aesthet Nova Regular',
-              color: colors.dimGray,
-            }}>
-            Jawa Tengah, Surakarta, Sondakan
-          </Text>
-        </View>
-        <Icon name="chevron-right" color={colors.dimGray} size={22} />
-      </View>
+      <Location />
       <FlatList
         data={data}
         renderItem={({item}) => <ItemCart item={item} />}
@@ -113,82 +72,123 @@ const Cart = () => {
           paddingVertical: 5,
         }}
       />
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          paddingVertical: 5,
-          justifyContent: 'space-between',
-          backgroundColor: '#fff',
-        }}>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <RadioButton
-            value="first"
-            status={all === 'all' ? 'checked' : 'unchecked'}
-            onPress={() => setAll('all')}
-            color={colors.dimGray}
-          />
-          <Text
-            style={{
-              marginLeft: 5,
-              fontSize: 14,
-              fontFamily: 'Aesthet Nova Regular',
-              color: colors.dimGray,
-            }}>
-            Semua
-          </Text>
+      <Checkout all={all} />
+    </View>
+  );
+}
+
+const Location = () => {
+  return (
+    <View style={styles.containerLocation}>
+      <View style={styles.containerMaps}>
+        <Icon name="google-maps" color={'red'} size={22} />
+        <Text style={styles.location}>Jawa Tengah, Surakarta, Sondakan</Text>
+      </View>
+      <Icon name="chevron-right" color={colors.dimGray} size={22} />
+    </View>
+  );
+}
+
+const Checkout = ({all}) => {
+  return (
+    <View style={styles.containerCheckout}>
+      <View style={styles.containerAll}>
+        <RadioButton
+          value="first"
+          status={all === 'all' ? 'checked' : 'unchecked'}
+          onPress={() => setAll('all')}
+          color={colors.dimGray}
+        />
+        <Text style={styles.textAll}>Semua</Text>
+      </View>
+      <View style={styles.containerTotal}>
+        <View style={{alignItems: 'flex-end'}}>
+          <Text style={styles.total}>Total</Text>
+          <Text style={styles.harga}>Rp. {total()}</Text>
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            marginHorizontal: 5,
-          }}>
-          <View
-            style={{
-              alignItems: 'flex-end',
-            }}>
-            <Text
-              style={{
-                fontSize: 14,
-                fontFamily: 'Aesthet Nova Regular',
-                color: colors.dimGray,
-              }}>
-              Total
-            </Text>
-            <Text
-              style={{
-                fontSize: 14,
-                fontFamily: 'Aesthet Nova Regular',
-                color: 'red',
-              }}>
-              Rp. {total()}
-            </Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: colors.darkSpringGreen,
-              marginLeft: 10,
-              padding: 10,
-              borderRadius: 10,
-            }}>
-            <Text
-              style={{
-                fontSize: 14,
-                fontFamily: 'Aesthet Nova Regular',
-                color: colors.white,
-              }}>
-              Checkout
-            </Text>
-          </View>
+        <View style={styles.containerButtonCheckout}>
+          <Text style={styles.checkout}>Checkout</Text>
         </View>
       </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  containerHeader: {
+    backgroundColor: colors.forestGreenCrayolan,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textHeader: {
+    fontSize: 19,
+    fontFamily: 'Aesthet Nova Regular',
+    color: colors.white,
+  },
+  containerLocation: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 10,
+  },
+  containerMaps: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  location: {
+    marginLeft: 10,
+    fontSize: 14,
+    fontFamily: 'Aesthet Nova Regular',
+    color: colors.dimGray,
+  },
+  containerCheckout: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 5,
+    justifyContent: 'space-between',
+    backgroundColor: '#fff',
+  },
+  containerAll: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  textAll: {
+    marginLeft: 5,
+    fontSize: 14,
+    fontFamily: 'Aesthet Nova Regular',
+    color: colors.dimGray,
+  },
+  containerTotal: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 5,
+  },
+  total: {
+    fontSize: 14,
+    fontFamily: 'Aesthet Nova Regular',
+    color: colors.dimGray,
+  },
+  harga: {
+    fontSize: 14,
+    fontFamily: 'Aesthet Nova Regular',
+    color: 'red',
+  },
+  containerButtonCheckout: {
+    backgroundColor: colors.darkSpringGreen,
+    marginLeft: 10,
+    padding: 10,
+    borderRadius: 10,
+  },
+  checkout: {
+    fontSize: 14,
+    fontFamily: 'Aesthet Nova Regular',
+    color: colors.white,
+  },
+});
 
 export default Cart;
