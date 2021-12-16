@@ -1,7 +1,7 @@
 import { StackActions } from '@react-navigation/routers';
 import React, { useEffect } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import {colors} from '../src/config/colors';
+import { colors } from '../../src/config/colors';
 
 const SplashScreen = ({navigation}) => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const SplashScreen = ({navigation}) => {
     return (
       <View style={styles.container}>
         <Image
-          source={require('../src/image/logosplash.png')}
+          source={require('../../src/image/logosplash.png')}
           style={styles.image}
         />
         <Text style={styles.text}>Toko</Text>

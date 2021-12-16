@@ -1,8 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { BottomTab, SplashScreen } from './components';
+import { BottomTab } from './components';
 import { DetailOrders } from './components/Orders';
+import { SplashScreen } from './components/Splash';
 
 const Stack = createNativeStackNavigator();
 

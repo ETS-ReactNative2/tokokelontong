@@ -1,4 +1,4 @@
-import SplashScreen from "./Splash";
+import SplashScreen from "./Splash/Splash";
 import ButtonTab from "./ButtonTab";
 import BottomTab from "./BottomTab";
 
