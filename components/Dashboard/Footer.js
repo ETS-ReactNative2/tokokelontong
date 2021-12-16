@@ -6,31 +6,31 @@ import { colors } from '../../src/config/colors';
 const data = [
   {
     title: 'Salad Buah',
-    image: require('../../src/image/home/salad.png'),
+    image: require('../../assets/image/home/salad.png'),
     hargaNormal: '20k',
     hargaDiskon: '15k',
   },
   {
     title: 'Tiramisu',
-    image: require('../../src/image/home/tiramisu.png'),
+    image: require('../../assets/image/home/tiramisu.png'),
     hargaNormal: '30k',
     hargaDiskon: '20k',
   },
   {
     title: 'Pudding',
-    image: require('../../src/image/home/pudding.png'),
+    image: require('../../assets/image/home/pudding.png'),
     hargaNormal: '50k',
     hargaDiskon: '30k',
   },
   {
     title: 'Roti Enak',
-    image: require('../../src/image/home/croissant.png'),
+    image: require('../../assets/image/home/croissant.png'),
     hargaNormal: '5k',
     hargaDiskon: '3k',
   },
   {
     title: 'Bubuk Kopi',
-    image: require('../../src/image/home/coffe.png'),
+    image: require('../../assets/image/home/coffe.png'),
     hargaNormal: '15k',
     hargaDiskon: '8k',
   },
