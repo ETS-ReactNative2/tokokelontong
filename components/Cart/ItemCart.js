@@ -20,7 +20,7 @@ const ItemCart = ({item}) => {
           alignItems: 'center',
           justifyContent: 'space-between',
           paddingBottom: 5,
-          borderBottomWidth: 0.5,
+          borderBottomWidth: 0.8,
           borderColor: '#eeeeee',
         }}>
         <View
