@@ -4,31 +4,31 @@ import { FlatList, Image, Text, View } from 'react-native';
 const data = [
   {
     title: 'Penyeduh Kopi',
-    image: require('../../src/image/home/coffemaker.png'),
+    image: require('../../assets/image/home/coffemaker.png'),
     harga: '5000k',
     new: '1',
   },
   {
     title: 'Teko',
-    image: require('../../src/image/home/teapot.png'),
+    image: require('../../assets/image/home/teapot.png'),
     harga: '200k',
     new: '1',
   },
   {
     title: 'Penumbuk Kopi',
-    image: require('../../src/image/home/harioskerton.png'),
+    image: require('../../assets/image/home/harioskerton.png'),
     harga: '6000k',
     new: '0',
   },
   {
     title: 'Bubuk Kopi',
-    image: require('../../src/image/home/coffepowder.png'),
+    image: require('../../assets/image/home/coffepowder.png'),
     harga: '100k',
     new: '0',
   },
   {
     title: 'Teko Panjang',
-    image: require('../../src/image/home/longteapot.png'),
+    image: require('../../assets/image/home/longteapot.png'),
     harga: '300k',
     new: '0',
   },
