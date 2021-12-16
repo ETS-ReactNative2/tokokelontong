@@ -8,7 +8,7 @@ const Cart = () => {
 
   return (
     <View style={{flex: 1}}>
-      <Header />
+      <Header text={'Cart'} />
       <Location />
       <RenderCart />
       <Checkout all={all} setAll={setAll} />
