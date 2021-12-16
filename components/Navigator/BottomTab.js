@@ -1,12 +1,12 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { createContext, useState } from 'react';
-import { colors } from '../src/config/colors';
 import { ButtonTab } from '.';
-import { Cart } from './Cart';
-import { Home } from './Dashboard'
-import { Orders } from './Orders';
-import { Recipe } from './Recipe';
-import { User } from './User';
+import { colors } from '../../src/config/colors';
+import { Cart } from '../Cart';
+import { Home } from '../Dashboard'
+import { Orders } from '../Orders';
+import { Recipe } from '../Recipe';
+import { User } from '../User';
 
 const Tab = createBottomTabNavigator();
 export const colorContext = createContext({

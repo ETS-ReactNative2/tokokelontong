@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import { colorContext } from './BottomTab';
-import { colors } from '../src/config/colors';
+import { colors } from '../../src/config/colors';
 
 const useMount = func => useEffect(() => func(), []);
 
