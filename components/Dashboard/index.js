@@ -4,6 +4,7 @@ import RenderBody from "./Body";
 import RenderFooter from "./Footer";
 import Home from "./Home";
 import ItemBody from "./ItemBody";
+import ItemFooter from "./ItemFooter";
 
 export {
     RenderSearch,
@@ -11,5 +12,6 @@ export {
     RenderBody,
     RenderFooter,
     Home,
-    ItemBody
+    ItemBody,
+    ItemFooter
 }
