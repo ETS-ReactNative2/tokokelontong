@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import {RadioButton} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {colors} from '../../src/config/colors';
+import { COLORS } from '../../constants';
 
 export const data = [
   {
@@ -70,11 +70,11 @@ const ItemCart = ({item}) => {
             value="first"
             status={checked === 'first' ? 'checked' : 'unchecked'}
             onPress={() => setChecked('first')}
-            color={colors.dimGray}
+            color={COLORS.dimGray}
           />
-          <Icon name="store" color={colors.dimGray} size={22} />
+          <Icon name="store" color={COLORS.dimGray} size={22} />
           <Text style={styles.namaPenjual}>{item.namaPenjual}</Text>
-          <Icon name="chevron-right" color={colors.dimGray} size={22} />
+          <Icon name="chevron-right" color={COLORS.dimGray} size={22} />
         </View>
         <Text style={styles.ubah}>Ubah</Text>
       </View>
@@ -85,7 +85,7 @@ const ItemCart = ({item}) => {
               value="first"
               status={checked === 'first' ? 'checked' : 'unchecked'}
               onPress={() => setChecked('first')}
-              color={colors.dimGray}
+              color={COLORS.dimGray}
             />
             <Image source={{uri: item.image}} style={styles.image} />
           </View>
@@ -128,7 +128,7 @@ const ItemCart = ({item}) => {
                 style={{
                   fontSize: 15,
                   fontFamily: 'Aesthet Nova Regular',
-                  color: colors.dimGray,
+                  color: COLORS.dimGray,
                   paddingHorizontal: 15,
                   borderTopWidth: 0.5,
                   borderBottomWidth: 0.5,
@@ -155,15 +155,15 @@ const ItemCart = ({item}) => {
         <View style={styles.containerVoucherIcon}>
           <Icon
             name="ticket-confirmation-outline"
-            color={colors.darkSpringGreen}
+            color={COLORS.darkSpringGreen}
             size={15}
           />
           <Text style={styles.voucher}>Voucher Diskon s/d Rp10RB tersedia</Text>
         </View>
-        <Icon name="chevron-right" color={colors.dimGray} size={15} />
+        <Icon name="chevron-right" color={COLORS.dimGray} size={15} />
       </View>
       <View style={styles.cotainerShipping}>
-        <Icon name="truck" color={colors.darkSpringGreen} size={15} />
+        <Icon name="truck" color={COLORS.darkSpringGreen} size={15} />
         <Text style={styles.freeOngkir}>Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...</Text>
       </View>
     </View>
@@ -191,14 +191,14 @@ const styles = StyleSheet.create({
   namaPenjual: {
     fontSize: 15,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
     marginLeft: 10,
     marginRight: 5,
   },
   ubah: {
     fontSize: 12,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
     marginRight: 10,
   },
   containerBodyItem: {
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
   order: {
     fontSize: 15,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
   },
   containerVarian: {
     marginTop: 10,
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
   varian: {
     fontSize: 11,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
     backgroundColor: '#fafafa',
     padding: 5,
   },
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 12,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
   },
   cotainerShipping: {
     flexDirection: 'row',
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 12,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
   },
 });
 
