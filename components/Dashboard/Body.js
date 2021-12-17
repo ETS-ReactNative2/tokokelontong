@@ -1,5 +1,6 @@
 import React from 'react';
-import { FlatList, Image, Text, View } from 'react-native';
+import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import { ItemBody } from '.';
 import { IMAGE } from '../../constants';
 
 const data = [
@@ -35,39 +36,23 @@ const data = [
   },
 ];
 
+const Header = () => {
+  return (
+    <View style={styles.boxHeader}>
+      <Text style={styles.titleLeft}>Produk Terbaru</Text>
+      <Text style={styles.titleRight}>view all</Text>
+    </View>
+  );
+};
+
 const RenderBody = () => {
     return (
-      <View
-        style={{
-          marginTop: 40,
-        }}>
-        <View
-          style={{
-            marginHorizontal: 20,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          <Text
-            style={{
-              fontSize: 20,
-              fontFamily: 'Aesthet Nova Regular',
-              color: '#656565',
-            }}>
-            Produk Terbaru
-          </Text>
-          <Text
-            style={{
-              fontFamily: 'Aesthet Nova Regular',
-              color: '#656565',
-            }}>
-            view all
-          </Text>
-        </View>
+      <View style={styles.container}>
+        <Header />
         <View>
           <FlatList
             data={data}
-            renderItem={renderItem}
+            renderItem={ItemBody}
             keyExtractor={item => item.title}
             horizontal={true}
             style={{
@@ -84,85 +69,25 @@ const RenderBody = () => {
     );
 }
 
-const renderItem = ({item}) => {
-  return <Item item={item} />;
-};
-
-const Item = ({item}) => (
-  <View
-    style={{
-      backgroundColor: '#fff',
-      paddingHorizontal: 15,
-      paddingTop: 15,
-      paddingBottom: 10,
-      borderRadius: 15,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginBottom: 10,
-      marginLeft: 1,
-      elevation: 4,
-      shadowColor: 'green',
-      shadowOffset: {
-        width: 5,
-        height: 10,
-      },
-      shadowOpacity: 1,
-      shadowRadius: 50,
-      borderWidth: 0.3,
-      borderColor: '#acd792',
-      marginEnd: 19,
-    }}>
-    <Image
-      style={{
-        height: 100,
-        width: 110,
-      }}
-      source={item.image}
-    />
-    <Text
-      style={{
-        marginTop: 10,
-        fontSize: 14,
-        fontFamily: 'Aesthet Nova Regular',
-        color: '#656565',
-      }}>
-      {item.title}
-    </Text>
-    <Text
-      style={{
-        marginTop: 3,
-        fontSize: 12,
-        fontFamily: 'Aesthet Nova Regular',
-        color: '#656565',
-      }}>
-      {item.harga}
-    </Text>
-    {item.new === '1' ? (
-      <View
-        style={{
-          position: 'absolute',
-          backgroundColor: '#f44336',
-          width: 40,
-          top: 0,
-          right: 0,
-          borderRadius: 5,
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: 5,
-        }}>
-        <Text
-          style={{
-            fontFamily: 'Aesthet Nova Bold',
-            color: '#fff',
-            fontSize: 10,
-          }}>
-          New
-        </Text>
-      </View>
-    ) : (
-      <View />
-    )}
-  </View>
-);
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 40,
+  },
+  boxHeader: {
+    marginHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  titleLeft: {
+    fontSize: 20,
+    fontFamily: 'Aesthet Nova Regular',
+    color: '#656565',
+  },
+  titleRight: {
+    fontFamily: 'Aesthet Nova Regular',
+    color: '#656565',
+  },
+});
 
 export default RenderBody;
