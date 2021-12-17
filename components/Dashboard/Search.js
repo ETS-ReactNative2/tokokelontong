@@ -20,18 +20,22 @@ const RenderSearch = () => {
         </View>
         <View onLayout={onLayout} style={styles.containerBoxSearch}>
           <View style={styles.boxSearch}>
-            <Icon name="magnify" size={25} color="#656565" />
+            <Icon name="magnify" size={25} color={COLORS.dimGray} />
             <TextInput
               value={search}
               onChangeText={search => setSearch(search)}
               style={{}}
               placeholder="Cari barang"
-              placeholderTextColor="#656565"
+              placeholderTextColor={COLORS.dimGray}
               style={styles.search}
             />
           </View>
-          <View style={[styles.boxCamera, {width: parentHeight, height: parentHeight}]}>
-            <Icon name="camera" size={20} color="#656565" />
+          <View
+            style={[
+              styles.boxCamera,
+              {width: parentHeight, height: parentHeight},
+            ]}>
+            <Icon name="camera" size={20} color={COLORS.dimGray} />
           </View>
         </View>
       </View>
