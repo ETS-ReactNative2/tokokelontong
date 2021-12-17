@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import { ItemHeader } from '.';
 import { IMAGE } from '../../../constants';
 
