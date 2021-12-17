@@ -10,9 +10,7 @@ const Home = () => {
     return (
       <View style={styles.container}>
         <StatusBar animated={true} barStyle="light-content" backgroundColor={COLORS.forestGreenCrayolan} />
-        <View
-          style={styles.boxHeader}
-        />
+        <View style={styles.boxHeader} />
         <RenderSearch />
         <ScrollView showsVerticalScrollIndicator={false} >
           <RenderHeader />
