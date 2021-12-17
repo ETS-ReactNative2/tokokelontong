@@ -1,12 +1,12 @@
 import React from 'react';
 import {Dimensions, ScrollView, StatusBar, StyleSheet, View} from 'react-native';
 import { RenderBody, RenderFooter, RenderSearch, RenderHeader} from '.';
-import { colors } from '../../src/config/colors';
+import { COLORS } from '../../constants';
 
 const Home = () => {
     return (
       <View style={styles.container}>
-        <StatusBar animated={true} barStyle="light-content" backgroundColor={colors.forestGreenCrayolan} />
+        <StatusBar animated={true} barStyle="light-content" backgroundColor={COLORS.forestGreenCrayolan} />
         <View
           style={styles.boxHeader}
         />
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   boxHeader: {
     height: 130,
     width: Dimensions.get('screen').width,
-    backgroundColor: colors.forestGreenCrayolan,
+    backgroundColor: COLORS.forestGreenCrayolan,
     borderBottomLeftRadius: 30,
   },
 });
