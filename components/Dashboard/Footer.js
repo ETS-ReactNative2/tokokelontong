@@ -1,36 +1,37 @@
 import React from 'react';
 import { FlatList, Image, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { IMAGE } from '../../constants';
 import { colors } from '../../src/config/colors';
 
 const data = [
   {
     title: 'Salad Buah',
-    image: require('../../assets/image/home/salad.png'),
+    image: IMAGE.salad,
     hargaNormal: '20k',
     hargaDiskon: '15k',
   },
   {
     title: 'Tiramisu',
-    image: require('../../assets/image/home/tiramisu.png'),
+    image: IMAGE.tiramisu,
     hargaNormal: '30k',
     hargaDiskon: '20k',
   },
   {
     title: 'Pudding',
-    image: require('../../assets/image/home/pudding.png'),
+    image: IMAGE.pudding,
     hargaNormal: '50k',
     hargaDiskon: '30k',
   },
   {
     title: 'Roti Enak',
-    image: require('../../assets/image/home/croissant.png'),
+    image: IMAGE.croissant,
     hargaNormal: '5k',
     hargaDiskon: '3k',
   },
   {
     title: 'Bubuk Kopi',
-    image: require('../../assets/image/home/coffe.png'),
+    image: IMAGE.coffe,
     hargaNormal: '15k',
     hargaDiskon: '8k',
   },
