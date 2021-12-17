@@ -1,26 +1,27 @@
 import React from 'react';
 import {FlatList, Image, Text, View} from 'react-native';
+import { IMAGE } from '../../constants';
 
 const data = [
   {
     title: 'Sayuran',
-    image: require('../../assets/image/home/veggie.png'),
+    image: IMAGE.veggie,
   },
   {
     title: 'Jajanan',
-    image: require('../../assets/image/home/snack.png'),
+    image: IMAGE.snack,
   },
   {
     title: 'Alat Tulis',
-    image: require('../../assets/image/home/stationery.png'),
+    image: IMAGE.stationery,
   },
   {
     title: 'Obat',
-    image: require('../../assets/image/home/medical.png'),
+    image: IMAGE.medical,
   },
   {
     title: 'Online Pay',
-    image: require('../../assets/image/home/payment.png'),
+    image: IMAGE.payment,
   },
 ];
 
