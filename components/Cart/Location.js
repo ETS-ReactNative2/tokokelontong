@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '../../src/config/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { COLORS } from '../../constants';
 
 const Location = () => {
   return (
@@ -10,7 +10,7 @@ const Location = () => {
         <Icon name="google-maps" color={'red'} size={22} />
         <Text style={styles.location}>Jawa Tengah, Surakarta, Sondakan</Text>
       </View>
-      <Icon name="chevron-right" color={colors.dimGray} size={22} />
+      <Icon name="chevron-right" color={COLORS.dimGray} size={22} />
     </View>
   );
 };
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     padding: 10,
   },
   containerMaps: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
   },
 });
 
