@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../src/config/colors';
 import {RadioButton} from 'react-native-paper';
+import { COLORS } from '../../constants';
 import { data } from './RenderCart';
 
 const Checkout = ({all, setAll}) => {
@@ -20,7 +20,7 @@ const Checkout = ({all, setAll}) => {
           value="first"
           status={all === 'all' ? 'checked' : 'unchecked'}
           onPress={() => setAll('all')}
-          color={colors.dimGray}
+          color={COLORS.dimGray}
         />
         <Text style={styles.textAll}>Semua</Text>
       </View>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 5,
     justifyContent: 'space-between',
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
   containerAll: {
     flexDirection: 'row',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
   },
   containerTotal: {
     flexDirection: 'row',
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   total: {
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.dimGray,
+    color: COLORS.dimGray,
   },
   harga: {
     fontSize: 14,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   containerButtonCheckout: {
-    backgroundColor: colors.darkSpringGreen,
+    backgroundColor: COLORS.darkSpringGreen,
     marginLeft: 10,
     padding: 10,
     borderRadius: 10,
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   checkout: {
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.white,
+    color: COLORS.white,
   },
 });
 
