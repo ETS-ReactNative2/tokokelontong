@@ -1,34 +1,35 @@
 import React from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
+import { IMAGE } from '../../constants';
 
 const data = [
   {
     title: 'Penyeduh Kopi',
-    image: require('../../assets/image/home/coffemaker.png'),
+    image: IMAGE.coffemaker,
     harga: '5000k',
     new: '1',
   },
   {
     title: 'Teko',
-    image: require('../../assets/image/home/teapot.png'),
+    image: IMAGE.teapot,
     harga: '200k',
     new: '1',
   },
   {
     title: 'Penumbuk Kopi',
-    image: require('../../assets/image/home/harioskerton.png'),
+    image: IMAGE.harioskerton,
     harga: '6000k',
     new: '0',
   },
   {
     title: 'Bubuk Kopi',
-    image: require('../../assets/image/home/coffepowder.png'),
+    image: IMAGE.coffpowder,
     harga: '100k',
     new: '0',
   },
   {
     title: 'Teko Panjang',
-    image: require('../../assets/image/home/longteapot.png'),
+    image: IMAGE.longteapot,
     harga: '300k',
     new: '0',
   },
