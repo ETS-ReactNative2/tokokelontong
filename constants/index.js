@@ -1,5 +1,7 @@
 import IMAGE from './image';
+import COLORS from './colors';
 
 export {
-    IMAGE
+    IMAGE,
+    COLORS
 }
