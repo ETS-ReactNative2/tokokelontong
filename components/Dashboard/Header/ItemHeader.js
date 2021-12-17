@@ -1,56 +1,9 @@
 import React from 'react';
 import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
-import { IMAGE } from '../../constants';
 
-const data = [
-  {
-    title: 'Sayuran',
-    image: IMAGE.veggie,
-  },
-  {
-    title: 'Jajanan',
-    image: IMAGE.snack,
-  },
-  {
-    title: 'Alat Tulis',
-    image: IMAGE.stationery,
-  },
-  {
-    title: 'Obat',
-    image: IMAGE.medical,
-  },
-  {
-    title: 'Online Pay',
-    image: IMAGE.payment,
-  },
-];
-
-const RenderHeader = () => {
-  return (
-    <View>
-      <FlatList
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={item => item.title}
-        horizontal={true}
-        style={{
-          marginTop: 20,
-        }}
-        contentContainerStyle={{
-          paddingLeft: 20,
-          paddingRight: 1,
-        }}
-        showsHorizontalScrollIndicator={false}
-      />
-    </View>
-  );
+const ItemHeader = ({item}) => {
+  return <Item item={item} />;
 };
-
-const renderItem = ({item}) => {
-    return (
-        <Item item={item} />
-    )
-}
 
 const Item = ({item}) => (
   <View style={styles.containerItem}>
@@ -90,7 +43,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontSize: 13,
     fontFamily: 'Aesthet Nova Regular',
-  }
+  },
 });
 
-export default RenderHeader;
+export default ItemHeader;

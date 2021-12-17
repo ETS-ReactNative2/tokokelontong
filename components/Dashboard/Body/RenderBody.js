@@ -1,7 +1,8 @@
 import React from 'react';
-import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { ItemBody } from '.';
-import { IMAGE } from '../../constants';
+import { HeaderBox } from '..';
+import { IMAGE } from '../../../constants';
 
 const data = [
   {
@@ -36,19 +37,10 @@ const data = [
   },
 ];
 
-const Header = () => {
-  return (
-    <View style={styles.boxHeader}>
-      <Text style={styles.titleLeft}>Produk Terbaru</Text>
-      <Text style={styles.titleRight}>view all</Text>
-    </View>
-  );
-};
-
 const RenderBody = () => {
     return (
       <View style={styles.container}>
-        <Header />
+        <HeaderBox textLeft={'Produk Terbaru'} textRight={'view all'} />
         <View>
           <FlatList
             data={data}
@@ -72,21 +64,6 @@ const RenderBody = () => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 40,
-  },
-  boxHeader: {
-    marginHorizontal: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  titleLeft: {
-    fontSize: 20,
-    fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
-  },
-  titleRight: {
-    fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
   },
 });
 

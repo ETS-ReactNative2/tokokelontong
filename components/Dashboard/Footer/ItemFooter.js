@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../src/config/colors';
+import {colors} from '../../../src/config/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const ItemFooter = ({item}) => {

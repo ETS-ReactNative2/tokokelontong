@@ -1,7 +1,10 @@
 import React from 'react';
 import {Dimensions, ScrollView, StatusBar, StyleSheet, View} from 'react-native';
-import { RenderBody, RenderFooter, RenderSearch, RenderHeader} from '.';
 import { COLORS } from '../../constants';
+import { RenderBody } from './Body';
+import { RenderFooter } from './Footer';
+import { RenderHeader } from './Header';
+import { RenderSearch } from './Search';
 
 const Home = () => {
     return (
@@ -12,9 +15,9 @@ const Home = () => {
         />
         <RenderSearch />
         <ScrollView showsVerticalScrollIndicator={false} >
-        <RenderHeader />
-        <RenderBody />
-        <RenderFooter />
+          <RenderHeader />
+          <RenderBody />
+          <RenderFooter />
         </ScrollView>
       </View>
     );

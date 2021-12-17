@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Dimensions, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { COLORS } from '../../constants';
+import { COLORS } from '../../../constants';
 
 const RenderSearch = () => {
     const [search, setSearch] = useState('');
