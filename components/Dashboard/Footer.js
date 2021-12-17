@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Image, Text, View} from 'react-native';
+import { FlatList, StyleSheet, Text, View} from 'react-native';
 import { ItemFooter } from '.';
 import { IMAGE } from '../../constants';
 
@@ -38,34 +38,8 @@ const data = [
 
 const RenderFooter = () => {
     return (
-      <View
-        style={{
-          marginTop: 35,
-          marginBottom: 10
-        }}>
-        <View
-          style={{
-            marginHorizontal: 20,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          <Text
-            style={{
-              fontSize: 20,
-              fontFamily: 'Aesthet Nova Regular',
-              color: '#656565',
-            }}>
-            Diskon Hari Ini !
-          </Text>
-          <Text
-            style={{
-              fontFamily: 'Aesthet Nova Regular',
-              color: '#656565',
-            }}>
-            view all
-          </Text>
-        </View>
+      <View style={styles.container}>
+        <Header />
         <FlatList
           data={data}
           renderItem={ItemFooter}
@@ -83,5 +57,36 @@ const RenderFooter = () => {
       </View>
     );
 }
+
+const Header = () => {
+  return (
+    <View style={styles.boxHeader}>
+      <Text style={styles.titleLeft}>Diskon Hari Ini !</Text>
+      <Text style={styles.titleRight}>view all</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 35,
+    marginBottom: 10,
+  },
+  boxHeader: {
+    marginHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  titleLeft: {
+    fontSize: 20,
+    fontFamily: 'Aesthet Nova Regular',
+    color: '#656565',
+  },
+  titleRight: {
+    fontFamily: 'Aesthet Nova Regular',
+    color: '#656565',
+  },
+});
 
 export default RenderFooter;
