@@ -1,8 +1,7 @@
 import React from 'react';
 import { FlatList, Image, Text, View} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ItemFooter } from '.';
 import { IMAGE } from '../../constants';
-import { colors } from '../../src/config/colors';
 
 const data = [
   {
@@ -69,7 +68,7 @@ const RenderFooter = () => {
         </View>
         <FlatList
           data={data}
-          renderItem={renderItem}
+          renderItem={ItemFooter}
           keyExtractor={item => item.title}
           horizontal={true}
           style={{
@@ -84,106 +83,5 @@ const RenderFooter = () => {
       </View>
     );
 }
-
-const renderItem = ({item}) => {
-  return <Item item={item} />;
-};
-
-const Item = ({item}) => (
-  <View
-    style={{
-      paddingTop: 20,
-      marginEnd: 20,
-    }}>
-    <View
-      style={{
-        backgroundColor: colors.forestGreenCrayolan,
-        height: 120,
-        width: 250,
-        borderRadius: 15,
-      }}>
-      <View
-        style={{
-          marginTop: 20,
-          marginLeft: 15,
-          marginRight: 100,
-        }}>
-        <Text
-          style={{
-            fontSize: 18,
-            fontFamily: 'Aesthet Nova Regular',
-            color: colors.white
-          }}>
-          {item.title}
-        </Text>
-        <Text
-          style={{
-            fontSize: 18,
-            fontFamily: 'Aesthet Nova Regular',
-            marginTop: 8,
-          }}>
-          <Text
-            style={{
-              textDecorationLine: 'line-through',
-              color: 'red',
-            }}>
-            {item.hargaNormal}
-          </Text>
-          <Text> / {item.hargaDiskon}</Text>
-        </Text>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: 8,
-            alignItems: 'center',
-          }}>
-          <View
-            style={{
-              backgroundColor: '#0a4823',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: 5,
-              marginEnd: 15,
-              borderRadius: 8,
-            }}>
-            <Icon name="minus" size={15} color="#fff" />
-          </View>
-          <Text
-            style={{
-              fontFamily: 'Aesthet Nova Regular',
-              fontSize: 18,
-            }}>
-            0
-          </Text>
-          <View
-            style={{
-              backgroundColor: '#0a4823',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: 5,
-              marginStart: 15,
-              borderRadius: 8,
-            }}>
-            <Icon name="plus" size={15} color="#fff" />
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={{
-        position: 'absolute',
-        top: 0,
-        right: 5,
-      }}>
-      <Image
-        source={item.image}
-        style={{
-          height: 90,
-          width: 120,
-        }}
-      />
-    </View>
-  </View>
-);
 
 export default RenderFooter;
