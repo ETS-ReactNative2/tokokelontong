@@ -1,6 +1,6 @@
 import ButtonTab from "./ButtonTab";
 import BottomTab from "./BottomTab";
-import { tabScreen } from "./data";
+import tabScreen from "./data";
 
 export {
     ButtonTab,

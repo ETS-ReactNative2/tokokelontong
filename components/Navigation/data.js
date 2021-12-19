@@ -42,4 +42,4 @@ const tabScreen = [
   },
 ];
 
-export {tabScreen};
+export default tabScreen;
