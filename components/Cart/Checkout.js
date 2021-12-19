@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {RadioButton} from 'react-native-paper';
+import { data } from '.';
 import { COLORS } from '../../constants';
-import { data } from './RenderCart';
 
 const Checkout = ({all, setAll}) => {
   const total = () => {
