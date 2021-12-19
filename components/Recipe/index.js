@@ -1,5 +1,5 @@
 import Recipe from "./Recipe";
-import { data } from "./data";
+import data from "./data";
 
 export {
     Recipe,
