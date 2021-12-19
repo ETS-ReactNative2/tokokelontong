@@ -1,30 +1,6 @@
 import React from 'react';
 import {FlatList, View} from 'react-native';
-import { ItemHeader } from '.';
-import { IMAGE } from '../../../constants';
-
-const data = [
-  {
-    title: 'Sayuran',
-    image: IMAGE.veggie,
-  },
-  {
-    title: 'Jajanan',
-    image: IMAGE.snack,
-  },
-  {
-    title: 'Alat Tulis',
-    image: IMAGE.stationery,
-  },
-  {
-    title: 'Obat',
-    image: IMAGE.medical,
-  },
-  {
-    title: 'Online Pay',
-    image: IMAGE.payment,
-  },
-];
+import { data, ItemHeader } from '.';
 
 const RenderHeader = () => {
   return (
