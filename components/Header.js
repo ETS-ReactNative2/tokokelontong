@@ -1,6 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {colors} from '../src/config/colors';
+import { StyleSheet, Text, View } from 'react-native';
+import { colors } from '../src/config/colors';
 
 const Header = ({text}) => {
   return (
