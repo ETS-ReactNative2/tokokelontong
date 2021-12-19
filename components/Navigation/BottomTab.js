@@ -32,8 +32,8 @@ const tabScreen = [
   {
     name: 'Cart',
     component: Cart,
-    iconActive: 'home-variant',
-    iconUnactive: 'home-variant-outline',
+    iconActive: 'cart',
+    iconUnactive: 'cart-outline',
     position: 'third',
   },
   {
