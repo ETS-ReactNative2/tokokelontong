@@ -16,7 +16,6 @@ export const colorContext = createContext({
 
 const tabScreen = [
   {
-    id: 1,
     name: 'Home',
     component: Home,
     iconActive: 'home-variant',
@@ -24,7 +23,6 @@ const tabScreen = [
     position: 'first',
   },
   {
-    id: 2,
     name: 'Recipe',
     component: Recipe,
     iconActive: 'book',
@@ -32,7 +30,6 @@ const tabScreen = [
     position: 'second',
   },
   {
-    id: 3,
     name: 'Cart',
     component: Cart,
     iconActive: 'home-variant',
@@ -40,7 +37,6 @@ const tabScreen = [
     position: 'third',
   },
   {
-    id: 4,
     name: 'Orders',
     component: Orders,
     iconActive: 'shopping',
@@ -48,7 +44,6 @@ const tabScreen = [
     position: 'fourth',
   },
   {
-    id: 5,
     name: 'User',
     component: User,
     iconActive: 'account',
@@ -73,7 +68,7 @@ const BottomTab = () => {
             },
           }}>
           {
-            tabScreen.map(value => {
+            tabScreen.map((value, i) => {
               return (
                 <Tab.Screen
                 name={value.name}
@@ -91,6 +86,7 @@ const BottomTab = () => {
                     />
                   ),
                 }}
+                key={i}
               />
               )
             })
