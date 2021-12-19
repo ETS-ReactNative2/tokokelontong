@@ -1,6 +1,5 @@
-import { useNavigation } from '@react-navigation/core';
-import React, { useContext, useEffect, useState } from 'react';
-import {BackHandler, Button, Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors } from '../../src/config/colors';
 
