@@ -1,6 +1,6 @@
 import DetailOrders from "./DetailOrders";
 import Orders from "./Orders";
-import { data } from "./data";
+import data from "./data";
 
 export {
     DetailOrders,
