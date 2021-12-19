@@ -1,61 +1,52 @@
-import React, {useContext, useEffect, useRef} from 'react';
+import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   Animated,
+  StyleSheet,
   Text,
   TouchableHighlight,
   View,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/core';
 import { colorContext } from './BottomTab';
 import { colors } from '../../src/config/colors';
-
-const useMount = func => useEffect(() => func(), []);
 
 const ButtonTab = ({position, navigations, icon}) => {
   const navigation = useNavigation();
   const {colorBackground, setColorBackground} = useContext(colorContext);
   const scale = useRef(new Animated.Value(0)).current;
 
-  const scaleSpring = () => {
+  const scaleSpring = useCallback(() => {
     scale.setValue(0);
     Animated.spring(scale, {
       toValue: 1,
       friction: 100,
       tension: 100,
-      useNativeDriver: true
+      useNativeDriver: true,
     }).start();
-  }
+  }, [])
 
-  useMount(() => scaleSpring());
+  useEffect(() => {
+    scaleSpring();
+  }, [])
 
   return (
     <TouchableHighlight
-      style={{
-        backgroundColor:
-          colorBackground === position ? colors.white : 'transparent',
-        borderRadius: 10,
-        marginBottom: 5,
-        marginTop: 5,
-        flex: 1,
-        marginHorizontal: 5,
-      }}
+      style={[
+        styles.buttonContainer,
+        {
+          backgroundColor:
+            colorBackground === position ? colors.white : 'transparent',
+        },
+      ]}
       onPress={() => {
         setColorBackground(position);
         navigation.navigate(navigations);
         scaleSpring();
       }}
       underlayColor={colors.forestGreenCrayolan}>
-      <View
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          paddingVertical: 5
-        }}>
-        <Animated.View
-          style={{
-            transform: [{scale: scale}],
-          }}>
+      <View style={styles.boxIcon}>
+        <Animated.View style={{transform: [{scale: scale}]}}>
           <Icon
             name={icon}
             size={25}
@@ -67,19 +58,36 @@ const ButtonTab = ({position, navigations, icon}) => {
           />
         </Animated.View>
         <Text
-          style={{
+          style={[{
             color:
               colorBackground === position
                 ? colors.forestGreenCrayolan
                 : colors.white,
-            fontFamily: 'Aesthet Nova Regular',
-            fontSize: 11,
-          }}>
+          }, styles.textIcon]}>
           {navigations}
         </Text>
       </View>
     </TouchableHighlight>
   );
 };
+
+const styles = StyleSheet.create({
+  buttonContainer: {
+    borderRadius: 10,
+    marginBottom: 5,
+    marginTop: 5,
+    flex: 1,
+    marginHorizontal: 5,
+  },
+  boxIcon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 5,
+  },
+  textIcon: {
+    fontFamily: 'Aesthet Nova Regular',
+    fontSize: 11,
+  },
+});
 
 export default ButtonTab;
