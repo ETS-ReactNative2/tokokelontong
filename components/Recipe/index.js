@@ -1,9 +1,7 @@
-import DetailRecipe from "./DetailRecipe";
-import ListHeaderRecipe from "./ListHeaderRecipe";
 import Recipe from "./Recipe";
+import { data } from "./data";
 
 export {
-    DetailRecipe,
-    ListHeaderRecipe,
-    Recipe
+    Recipe,
+    data
 }
