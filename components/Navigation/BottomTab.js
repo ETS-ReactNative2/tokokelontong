@@ -12,7 +12,50 @@ const Tab = createBottomTabNavigator();
 export const colorContext = createContext({
   colorBackground: 'first',
   setColorBackground: () => {}
-})
+});
+
+const tabScreen = [
+  {
+    id: 1,
+    name: 'Home',
+    component: Home,
+    iconActive: 'home-variant',
+    iconUnactive: 'home-variant-outline',
+    position: 'first',
+  },
+  {
+    id: 2,
+    name: 'Recipe',
+    component: Recipe,
+    iconActive: 'book',
+    iconUnactive: 'book-outline',
+    position: 'second',
+  },
+  {
+    id: 3,
+    name: 'Cart',
+    component: Cart,
+    iconActive: 'home-variant',
+    iconUnactive: 'home-variant-outline',
+    position: 'third',
+  },
+  {
+    id: 4,
+    name: 'Orders',
+    component: Orders,
+    iconActive: 'shopping',
+    iconUnactive: 'shopping-outline',
+    position: 'fourth',
+  },
+  {
+    id: 5,
+    name: 'User',
+    component: User,
+    iconActive: 'account',
+    iconUnactive: 'account-outline',
+    position: 'fifth',
+  },
+];
 
 const BottomTab = () => {
   const [colorBackground, setColorBackground] = useState('first');
@@ -29,83 +72,29 @@ const BottomTab = () => {
               backgroundColor: colors.forestGreenCrayolan,
             },
           }}>
-          <Tab.Screen
-            name="Home"
-            component={Home}
-            options={{
-              tabBarButton: () => (
-                <ButtonTab
-                  navigations={'Home'}
-                  icon={
-                    colorBackground === 'first'
-                      ? 'home-variant'
-                      : 'home-variant-outline'
-                  }
-                  position={'first'}
-                />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Recipe"
-            component={Recipe}
-            options={{
-              tabBarButton: () => (
-                <ButtonTab
-                  navigations={'Recipe'}
-                  icon={colorBackground === 'second' ? 'book' : 'book-outline'}
-                  position={'second'}
-                />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Cart"
-            component={Cart}
-            options={{
-              tabBarButton: () => (
-                <ButtonTab
-                  navigations={'Cart'}
-                  icon={colorBackground === 'third' ? 'cart' : 'cart-outline'}
-                  position={'third'}
-                />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Orders"
-            component={Orders}
-            options={{
-              tabBarButton: () => (
-                <ButtonTab
-                  navigations={'Orders'}
-                  icon={
-                    colorBackground === 'fourth'
-                      ? 'shopping'
-                      : 'shopping-outline'
-                  }
-                  position={'fourth'}
-                />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="User"
-            component={User}
-            options={{
-              tabBarButton: () => (
-                <ButtonTab
-                  navigations={'User'}
-                  icon={
-                    colorBackground === 'fifth'
-                      ? 'account'
-                      : 'account-outline'
-                  }
-                  position={'fifth'}
-                />
-              ),
-            }}
-          />
+          {
+            tabScreen.map(value => {
+              return (
+                <Tab.Screen
+                name={value.name}
+                component={value.component}
+                options={{
+                  tabBarButton: () => (
+                    <ButtonTab
+                      navigations={value.name}
+                      icon={
+                        colorBackground === value.position
+                          ? value.iconActive
+                          : value.iconUnactive
+                      }
+                      position={value.position}
+                    />
+                  ),
+                }}
+              />
+              )
+            })
+          }
         </Tab.Navigator>
       </colorContext.Provider>
     );
