@@ -2,13 +2,12 @@ import React from 'react';
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { COLORS } from '../../constants';
+import { Header } from '..';
 
 const User = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.textHeader}>Profile</Text>
-      </View>
+      <Header text={'Profile'} />
       <View style={styles.profile}>
         <View style={styles.boxImage}>
           <Image
