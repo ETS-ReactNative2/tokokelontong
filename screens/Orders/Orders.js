@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Header } from '..';
 import { COLORS } from '../../constants';
 
 const data = [
@@ -65,9 +66,7 @@ const Orders = ({}) => {
       style={{
         flex: 1,
       }}>
-      <View style={styles.header}>
-        <Text style={styles.textHeader}>Order</Text>
-      </View>
+      <Header text={'Order'} />
       <FlatList 
         data={data}
         renderItem={renderItem}
