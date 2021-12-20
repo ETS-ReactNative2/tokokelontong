@@ -2,7 +2,6 @@ import {useNavigation} from '@react-navigation/core';
 import React from 'react';
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import { COLORS } from '../../../constants';
-import { colors } from '../../../src/config/colors';
 
 const Body = ({item}) => <ItemVertical item={item} />;
 
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
   totalResep: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: colors.forestGreenCrayolan,
+    color: COLORS.forestGreenCrayolan,
   },
 });
 
