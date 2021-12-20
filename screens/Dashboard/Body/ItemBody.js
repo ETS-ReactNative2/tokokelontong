@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+import { COLORS } from '../../../constants';
 
 const ItemBody = ({item}) => {
     return <Item item={item} />;
@@ -22,7 +23,7 @@ const Item = ({item}) => (
 
 const styles = StyleSheet.create({
   containerItem: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     paddingHorizontal: 15,
     paddingTop: 15,
     paddingBottom: 10,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 50,
     borderWidth: 0.3,
-    borderColor: '#acd792',
+    borderColor: COLORS.grannySmithApple,
     marginEnd: 19,
   },
   image: {
@@ -51,17 +52,17 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 14,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: COLORS.dimGray,
   },
   harga: {
     marginTop: 3,
     fontSize: 12,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: COLORS.dimGray,
   },
   badge: {
     position: 'absolute',
-    backgroundColor: '#f44336',
+    backgroundColor: COLORS.red,
     width: 40,
     top: 0,
     right: 0,
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
   },
   titleBadge: {
     fontFamily: 'Aesthet Nova Bold',
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 10,
   },
 });
