@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import { COLORS } from '../../../constants';
 
 const DetailRecipe = () => {
   return (
@@ -14,10 +15,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
   text: {
-    color: '#000',
+    color: COLORS.black,
     fontFamily: 'Aesthet Nova Bold',
     fontSize: 18,
   },
