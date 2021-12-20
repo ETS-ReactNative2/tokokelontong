@@ -1,5 +1,6 @@
 import React from 'react';
 import { ImageBackground, StyleSheet, View } from 'react-native';
+import { COLORS } from '../../../constants';
 
 const ItemHeader = ({item}) => <ItemHorizontal item={item} />;
 
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   coupon: {
     width: 20,
     height: 20,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
 });
 
