@@ -5,9 +5,9 @@ import {
   View,
 } from 'react-native';
 import Timeline from 'react-native-timeline-flatlist';
-import { Header } from '..';
 import { data } from '.';
-import { COLORS } from '../../constants';
+import { Header } from '../..';
+import { COLORS } from '../../../constants';
 
 const DetailOrders = () => { 
     return (
