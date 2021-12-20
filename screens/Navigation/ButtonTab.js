@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { colorContext } from './BottomTab';
-import { colors } from '../../src/config/colors';
+import { COLORS } from '../../constants';
 
 const ButtonTab = ({position, navigations, icon}) => {
   const navigation = useNavigation();
@@ -36,7 +36,7 @@ const ButtonTab = ({position, navigations, icon}) => {
         styles.buttonContainer,
         {
           backgroundColor:
-            colorBackground === position ? colors.white : 'transparent',
+            colorBackground === position ? COLORS.white : 'transparent',
         },
       ]}
       onPress={() => {
@@ -44,7 +44,7 @@ const ButtonTab = ({position, navigations, icon}) => {
         navigation.navigate(navigations);
         scaleSpring();
       }}
-      underlayColor={colors.forestGreenCrayolan}>
+      underlayColor={COLORS.forestGreenCrayolan}>
       <View style={styles.boxIcon}>
         <Animated.View style={{transform: [{scale: scale}]}}>
           <Icon
@@ -52,8 +52,8 @@ const ButtonTab = ({position, navigations, icon}) => {
             size={25}
             color={
               colorBackground === position
-                ? colors.forestGreenCrayolan
-                : colors.white
+                ? COLORS.forestGreenCrayolan
+                : COLORS.white
             }
           />
         </Animated.View>
@@ -61,8 +61,8 @@ const ButtonTab = ({position, navigations, icon}) => {
           style={[{
             color:
               colorBackground === position
-                ? colors.forestGreenCrayolan
-                : colors.white,
+                ? COLORS.forestGreenCrayolan
+                : COLORS.white,
           }, styles.textIcon]}>
           {navigations}
         </Text>
