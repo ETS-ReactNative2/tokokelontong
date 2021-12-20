@@ -1,7 +1,7 @@
 import { StackActions } from '@react-navigation/routers';
 import React, { useEffect } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { IMAGE } from '../../constants';
+import { COLORS, IMAGE } from '../../constants';
 import { colors } from '../../src/config/colors';
 
 const SplashScreen = ({navigation}) => {
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Aesthet Nova Bold',
     fontSize: 25,
-    color: '#fff',
+    color: COLORS.white,
   },
 });
 
