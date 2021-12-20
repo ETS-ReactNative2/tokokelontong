@@ -54,56 +54,14 @@ const ItemCart = ({item}) => {
           <View style={styles.containerVarian}>
             <Text style={styles.varian}>Varian : {item.varian}</Text>
           </View>
-          <View
-            style={{
-              marginTop: 20,
-              marginBottom: 10,
-            }}>
-            <Text
-              style={{
-                fontSize: 16,
-                fontFamily: 'Aesthet Nova Regular',
-                color: 'red',
-              }}>
-              Rp. {item.harga}
-            </Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                marginTop: 15,
-              }}>
-              <View
-                style={{
-                  width: 20,
-                  height: 20,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderWidth: 0.5,
-                  borderColor: '#eeeeee',
-                }}>
+          <View style={styles.boxHarga}>
+            <Text style={styles.harga}>Rp. {item.harga}</Text>
+            <View style={styles.boxJumlah}>
+              <View style={styles.boxMinus}>
                 <Icon name="minus" color={'#000000'} size={15} />
               </View>
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontFamily: 'Aesthet Nova Regular',
-                  color: COLORS.dimGray,
-                  paddingHorizontal: 15,
-                  borderTopWidth: 0.5,
-                  borderBottomWidth: 0.5,
-                  borderColor: '#eeeeee',
-                }}>
-                {item.jumlah}
-              </Text>
-              <View
-                style={{
-                  width: 20,
-                  height: 20,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderWidth: 0.5,
-                  borderColor: '#eeeeee',
-                }}>
+              <Text style={styles.jumlah}>{item.jumlah}</Text>
+              <View style={styles.boxPlus}>
                 <Icon name="plus" color={'#000000'} size={15} />
               </View>
             </View>
@@ -225,6 +183,44 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
+  },
+  boxHarga: {
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  harga: {
+    fontSize: 16,
+    fontFamily: 'Aesthet Nova Regular',
+    color: 'red',
+  },
+  boxJumlah: {
+    flexDirection: 'row',
+    marginTop: 15,
+  },
+  boxMinus: {
+    width: 20,
+    height: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 0.5,
+    borderColor: '#eeeeee',
+  },
+  jumlah: {
+    fontSize: 15,
+    fontFamily: 'Aesthet Nova Regular',
+    color: COLORS.dimGray,
+    paddingHorizontal: 15,
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5,
+    borderColor: '#eeeeee',
+  },
+  boxPlus: {
+    width: 20,
+    height: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 0.5,
+    borderColor: '#eeeeee',
   },
 });
 
