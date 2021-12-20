@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import { COLORS } from '../../constants';
 
 const HeaderBox = ({textLeft, textRight}) => {
   return (
@@ -20,11 +21,11 @@ const styles = StyleSheet.create({
   titleLeft: {
     fontSize: 20,
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: COLORS.dimGray,
   },
   titleRight: {
     fontFamily: 'Aesthet Nova Regular',
-    color: '#656565',
+    color: COLORS.dimGray,
   },
 });
 
