@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+import { COLORS } from '../../../constants';
 
 const ItemHeader = ({item}) => {
   return <Item item={item} />;
@@ -14,7 +15,7 @@ const Item = ({item}) => (
 
 const styles = StyleSheet.create({
   containerItem: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     marginEnd: 19,
     paddingHorizontal: 10,
     paddingTop: 15,
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginLeft: 1,
     borderWidth: 0.3,
-    borderColor: '#acd792',
+    borderColor: COLORS.grannySmithApple,
     borderRadius: 10,
   },
   image: {
