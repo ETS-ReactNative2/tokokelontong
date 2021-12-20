@@ -126,17 +126,6 @@ const Item = ({item}) => {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: COLORS.forestGreenCrayolan,
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  textHeader: {
-    fontSize: 19,
-    fontFamily: 'Aesthet Nova Regular',
-    color: COLORS.white,
-  },
   containerItem: {
     flex: 1,
     backgroundColor: COLORS.white,
