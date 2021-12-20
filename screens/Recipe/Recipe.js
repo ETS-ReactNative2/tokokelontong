@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, StyleSheet, Text, View} from 'react-native';
 import { data } from '.';
 import { Header } from '..';
+import { COLORS } from '../../constants';
 import { Body } from './Body';
 import { HeaderRecipe } from './Header';
 
@@ -28,14 +29,14 @@ const Recipe = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
   resepTitle: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 19,
     marginLeft: 15,
     marginBottom: 20,
-    color: '#0a4823',
+    color: COLORS.forestGreenTraditional,
   },
 });
 
