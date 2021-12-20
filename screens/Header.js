@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '../src/config/colors';
+import { COLORS } from '../constants';
 
 const Header = ({text}) => {
   return (
@@ -12,7 +12,7 @@ const Header = ({text}) => {
 
 const styles = StyleSheet.create({
   containerHeader: {
-    backgroundColor: colors.forestGreenCrayolan,
+    backgroundColor: COLORS.forestGreenCrayolan,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   textHeader: {
     fontSize: 19,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.white,
+    color: COLORS.white,
   },
 });
 

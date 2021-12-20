@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React, { createContext, useState } from 'react';
 import { ButtonTab, tabScreen } from '.';
-import { colors } from '../../src/config/colors';
+import { COLORS } from '../../constants';
 
 const Tab = createBottomTabNavigator();
 export const colorContext = createContext({
@@ -21,7 +21,7 @@ const BottomTab = () => {
             headerShown: false,
             tabBarStyle: {
               height: 60,
-              backgroundColor: colors.forestGreenCrayolan,
+              backgroundColor: COLORS.forestGreenCrayolan,
             },
           }}>
           {

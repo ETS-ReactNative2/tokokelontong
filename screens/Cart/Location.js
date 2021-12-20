@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { COLORS } from '../../constants';
+import { COLORS, ICONS } from '../../constants';
 
 const Location = () => {
   return (
     <View style={styles.containerLocation}>
       <View style={styles.containerMaps}>
-        <Icon name="google-maps" color={COLORS.red} size={22} />
+        <Icon name={'google-maps'} color={COLORS.red} size={22} />
         <Text style={styles.location}>Jawa Tengah, Surakarta, Sondakan</Text>
       </View>
       <Icon name="chevron-right" color={COLORS.dimGray} size={22} />

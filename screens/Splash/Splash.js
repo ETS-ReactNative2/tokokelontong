@@ -2,7 +2,6 @@ import { StackActions } from '@react-navigation/routers';
 import React, { useEffect } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { COLORS, IMAGE } from '../../constants';
-import { colors } from '../../src/config/colors';
 
 const SplashScreen = ({navigation}) => {
   useEffect(() => {
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.forestGreenCrayolan,
+    backgroundColor: COLORS.forestGreenCrayolan,
   },
   image: {
     height: 100,
