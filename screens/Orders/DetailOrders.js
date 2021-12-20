@@ -4,10 +4,10 @@ import {
   Text,
   View,
 } from 'react-native';
-import { colors } from '../../src/config/colors';
 import Timeline from 'react-native-timeline-flatlist';
 import { Header } from '..';
 import { data } from '.';
+import { COLORS } from '../../constants';
 
 const DetailOrders = () => { 
     return (
@@ -19,8 +19,8 @@ const DetailOrders = () => {
             <Timeline
               data={data}
               innerCircle={'dot'}
-              lineColor={colors.forestGreenCrayolan}
-              circleColor={colors.forestGreenCrayolan}
+              lineColor={COLORS.forestGreenCrayolan}
+              circleColor={COLORS.forestGreenCrayolan}
               timeStyle={styles.timeline}
               descriptionStyle={styles.timelineDesc}
               titleStyle={styles.titleTimeline}
@@ -34,7 +34,7 @@ const DetailOrders = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
   },
   containerTimeline: {
     flex: 1,
@@ -44,13 +44,13 @@ const styles = StyleSheet.create({
   textTitle: {
     fontSize: 19,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.darkSpringGreen,
+    color: COLORS.darkSpringGreen,
     marginBottom: 20,
   },
   timeline: {
-    backgroundColor: '#ff9797',
+    backgroundColor: COLORS.lightCoral,
     textAlign: 'center',
-    color: colors.white,
+    color: COLORS.white,
     paddingHorizontal: 2,
     paddingVertical: 3,
     fontFamily: 'Aesthet Nova Regular',
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     paddingBottom: 15,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.darkSpringGreen,
-    borderBottomColor: colors.forestGreenCrayolan,
+    color: COLORS.darkSpringGreen,
+    borderBottomColor: COLORS.forestGreenCrayolan,
   },
   titleTimeline: {
-    color: colors.dimGray,
+    color: COLORS.dimGray,
     fontFamily: 'Aesthet Nova Regular',
   },
 });
