@@ -58,11 +58,11 @@ const ItemCart = ({item}) => {
             <Text style={styles.harga}>Rp. {item.harga}</Text>
             <View style={styles.boxJumlah}>
               <View style={styles.boxMinus}>
-                <Icon name="minus" color={'#000000'} size={15} />
+                <Icon name="minus" color={COLORS.black} size={15} />
               </View>
               <Text style={styles.jumlah}>{item.jumlah}</Text>
               <View style={styles.boxPlus}>
-                <Icon name="plus" color={'#000000'} size={15} />
+                <Icon name="plus" color={COLORS.black} size={15} />
               </View>
             </View>
           </View>
@@ -81,7 +81,9 @@ const ItemCart = ({item}) => {
       </View>
       <View style={styles.cotainerShipping}>
         <Icon name="truck" color={COLORS.darkSpringGreen} size={15} />
-        <Text style={styles.freeOngkir}>Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...</Text>
+        <Text style={styles.freeOngkir}>
+          Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...
+        </Text>
       </View>
     </View>
   );
@@ -89,7 +91,7 @@ const ItemCart = ({item}) => {
 
 const styles = StyleSheet.create({
   containerItem: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     marginBottom: 5,
     padding: 5,
   },
@@ -99,7 +101,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingBottom: 5,
     borderBottomWidth: 0.8,
-    borderColor: '#eeeeee',
+    borderColor: COLORS.culturedE,
   },
   containerHeaderLeft: {
     flexDirection: 'row',
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     borderBottomWidth: 0.5,
     paddingBottom: 10,
-    borderColor: '#eeeeee',
+    borderColor: COLORS.culturedE,
   },
   containerImageRadio: {
     flexDirection: 'row',
@@ -148,7 +150,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
-    backgroundColor: '#fafafa',
+    backgroundColor: COLORS.culturedE,
     padding: 5,
   },
   containerVoucher: {
@@ -157,8 +159,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 10,
-    borderBottomWidth: 0.5,
-    borderColor: '#eeeeee',
+    borderBottomWidth: 0.8,
+    borderColor: COLORS.culturedE,
     paddingHorizontal: 10,
   },
   containerVoucherIcon: {
@@ -191,7 +193,7 @@ const styles = StyleSheet.create({
   harga: {
     fontSize: 16,
     fontFamily: 'Aesthet Nova Regular',
-    color: 'red',
+    color: COLORS.red,
   },
   boxJumlah: {
     flexDirection: 'row',
@@ -203,7 +205,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 0.5,
-    borderColor: '#eeeeee',
+    borderColor: COLORS.culturedE,
   },
   jumlah: {
     fontSize: 15,
@@ -212,7 +214,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderTopWidth: 0.5,
     borderBottomWidth: 0.5,
-    borderColor: '#eeeeee',
+    borderColor: COLORS.culturedE,
   },
   boxPlus: {
     width: 20,
@@ -220,7 +222,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 0.5,
-    borderColor: '#eeeeee',
+    borderColor: COLORS.culturedE,
   },
 });
 
