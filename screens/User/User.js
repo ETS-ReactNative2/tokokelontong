@@ -1,12 +1,9 @@
 import React from 'react';
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { colors } from '../../src/config/colors';
+import { COLORS } from '../../constants';
 
 const User = () => {
-  let colorPencil = '#656565';
-  let colorIcon = '#656565';
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -31,51 +28,51 @@ const User = () => {
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* email */}
         <View style={styles.box}>
-          <Icon name="email" size={24} color={colorIcon} />
+          <Icon name="email" size={24} color={COLORS.dimGray} />
           <View style={styles.box2}>
             <View>
               <Text style={styles.title}>Email</Text>
               <Text style={styles.email}>andikscript@gmail.com</Text>
             </View>
-            <Icon name="pencil" size={20} color={colorPencil} />
+            <Icon name="pencil" size={20} color={COLORS.dimGray} />
           </View>
         </View>
         {/* phone */}
         <View style={styles.box}>
-          <Icon name="cellphone" size={24} color={colorIcon} />
+          <Icon name="cellphone" size={24} color={COLORS.dimGray} />
           <View style={styles.box2}>
             <View>
               <Text style={styles.title}>No. Telp</Text>
               <Text style={styles.email}>+971-50-7777777</Text>
             </View>
-            <Icon name="pencil" size={20} color={colorPencil} />
+            <Icon name="pencil" size={20} color={COLORS.dimGray} />
           </View>
         </View>
         {/* twitter */}
         <View style={styles.box}>
-          <Icon name="twitter" size={24} color={colorIcon} />
+          <Icon name="twitter" size={24} color={COLORS.dimGray} />
           <View style={styles.box2}>
             <View>
               <Text style={styles.title}>Twitter</Text>
               <Text style={styles.email}>@andikscript</Text>
             </View>
-            <Icon name="pencil" size={20} color={colorPencil} />
+            <Icon name="pencil" size={20} color={COLORS.dimGray} />
           </View>
         </View>
         {/* alamat */}
         <View style={styles.box}>
-          <Icon name="map-marker" size={24} color={colorIcon} />
+          <Icon name="map-marker" size={24} color={COLORS.dimGray} />
           <View style={styles.box2}>
             <View>
               <Text style={styles.title}>Alamat</Text>
               <Text style={styles.email}>Ponorogo, IDN</Text>
             </View>
-            <Icon name="pencil" size={20} color={colorPencil} />
+            <Icon name="pencil" size={20} color={COLORS.dimGray} />
           </View>
         </View>
         {/* logout */}
         <View style={styles.box}>
-          <Icon name="logout-variant" size={24} color={colorIcon} />
+          <Icon name="logout-variant" size={24} color={COLORS.dimGray} />
           <View style={styles.box2}>
             <Text style={styles.title}>Logout</Text>
           </View>
@@ -88,10 +85,10 @@ const User = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: COLORS.white,
   },
   header: {
-    backgroundColor: colors.forestGreenCrayolan,
+    backgroundColor: COLORS.forestGreenCrayolan,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
@@ -99,10 +96,10 @@ const styles = StyleSheet.create({
   textHeader: {
     fontSize: 19,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.white,
+    color: COLORS.white,
   },
   profile: {
-    backgroundColor: colors.forestGreenCrayolan,
+    backgroundColor: COLORS.forestGreenCrayolan,
     width: Dimensions.get('screen').width,
     alignItems: 'center',
     borderBottomLeftRadius: 20,
@@ -129,13 +126,13 @@ const styles = StyleSheet.create({
   name: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 19,
-    color: colors.white,
+    color: COLORS.white,
     marginTop: 15,
   },
   username: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: colors.white,
+    color: COLORS.white,
   },
   boxFollow: {
     marginTop: 20,
@@ -146,12 +143,12 @@ const styles = StyleSheet.create({
   follower: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 13,
-    color: colors.white,
+    color: COLORS.white,
   },
   follow: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 13,
-    color: colors.white,
+    color: COLORS.white,
   },
   scroll: {
     padding: 15,
@@ -174,13 +171,13 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 15,
-    color: colors.dimGray,
+    color: COLORS.dimGray,
     marginBottom: 5,
   },
   email: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: colors.seaGreen,
+    color: COLORS.seaGreen,
   },
 });
 
