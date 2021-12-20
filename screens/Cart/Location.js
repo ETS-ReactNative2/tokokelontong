@@ -7,7 +7,7 @@ const Location = () => {
   return (
     <View style={styles.containerLocation}>
       <View style={styles.containerMaps}>
-        <Icon name={'google-maps'} color={COLORS.red} size={22} />
+        <Icon name={ICONS.googleMap} color={COLORS.red} size={22} />
         <Text style={styles.location}>Jawa Tengah, Surakarta, Sondakan</Text>
       </View>
       <Icon name="chevron-right" color={COLORS.dimGray} size={22} />

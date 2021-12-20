@@ -1,10 +1,7 @@
-import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { FlatList, View} from 'react-native';
 import { data, RenderOrders } from '.';
 import { Header } from '..';
-import { COLORS } from '../../constants';
 
 const Orders = ({}) => {
   return (

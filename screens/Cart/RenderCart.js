@@ -3,7 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import {RadioButton} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { data } from '.';
-import { COLORS } from '../../constants';
+import { COLORS, ICONS } from '../../constants';
 
 const RenderCart = () => {
   return (
@@ -70,20 +70,14 @@ const ItemCart = ({item}) => {
       </View>
       <View style={styles.containerVoucher}>
         <View style={styles.containerVoucherIcon}>
-          <Icon
-            name="ticket-confirmation-outline"
-            color={COLORS.darkSpringGreen}
-            size={15}
-          />
+          <Icon name={ICONS.ticket} color={COLORS.darkSpringGreen} size={15} />
           <Text style={styles.voucher}>Voucher Diskon s/d Rp10RB tersedia</Text>
         </View>
-        <Icon name="chevron-right" color={COLORS.dimGray} size={15} />
+        <Icon name={ICONS.chevronRight} color={COLORS.dimGray} size={15} />
       </View>
       <View style={styles.cotainerShipping}>
-        <Icon name="truck" color={COLORS.darkSpringGreen} size={15} />
-        <Text style={styles.freeOngkir}>
-          Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...
-        </Text>
+        <Icon name={ICONS.truck} color={COLORS.darkSpringGreen} size={15} />
+        <Text style={styles.freeOngkir}>Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...</Text>
       </View>
     </View>
   );

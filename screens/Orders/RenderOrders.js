@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { COLORS } from '../../constants';
+import { COLORS, ICONS } from '../../constants';
 
 const RenderOrders = ({item}) => <Item item={item} />;
 
@@ -46,7 +46,7 @@ const Item = ({item}) => {
       </View>
       <View style={styles.footer}>
         <View style={styles.boxKurir}>
-          <Icon name="truck" color={COLORS.forestGreenCrayolan} size={20} />
+          <Icon name={ICONS.truck} color={COLORS.forestGreenCrayolan} size={20} />
           <Text style={styles.kurir}>{item.kurir}</Text>
         </View>
         <TouchableOpacity

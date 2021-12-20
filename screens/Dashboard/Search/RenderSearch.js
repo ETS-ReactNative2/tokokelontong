@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Dimensions, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { COLORS } from '../../../constants';
+import { COLORS, ICONS } from '../../../constants';
 
 const RenderSearch = () => {
     const [search, setSearch] = useState('');
@@ -16,11 +16,11 @@ const RenderSearch = () => {
       <View style={styles.containerSearch}>
         <View style={styles.boxTitle}>
           <Text style={styles.title}>Toko Kelontong</Text>
-          <Icon name="map-marker" size={25} color={COLORS.white} />
+          <Icon name={ICONS.mapMarker} size={25} color={COLORS.white} />
         </View>
         <View onLayout={onLayout} style={styles.containerBoxSearch}>
           <View style={styles.boxSearch}>
-            <Icon name="magnify" size={25} color={COLORS.dimGray} />
+            <Icon name={ICONS.magnify} size={25} color={COLORS.dimGray} />
             <TextInput
               value={search}
               onChangeText={search => setSearch(search)}
@@ -35,7 +35,7 @@ const RenderSearch = () => {
               styles.boxCamera,
               {width: parentHeight, height: parentHeight},
             ]}>
-            <Icon name="camera" size={20} color={COLORS.dimGray} />
+            <Icon name={ICONS.camera} size={20} color={COLORS.dimGray} />
           </View>
         </View>
       </View>
