@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {colors} from '../../../src/config/colors';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { COLORS } from '../../../constants';
 
 const ItemFooter = ({item}) => {
   return <Item item={item} />;
@@ -18,11 +18,11 @@ const Item = ({item}) => (
         </Text>
         <View style={styles.boxChart}>
           <View style={styles.minus}>
-            <Icon name="minus" size={15} color="#fff" />
+            <Icon name="minus" size={15} color={COLORS.white} />
           </View>
           <Text style={styles.total}>0</Text>
           <View style={styles.add}>
-            <Icon name="plus" size={15} color="#fff" />
+            <Icon name="plus" size={15} color={COLORS.white} />
           </View>
         </View>
       </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginEnd: 20,
   },
   boxItem: {
-    backgroundColor: colors.forestGreenCrayolan,
+    backgroundColor: COLORS.forestGreenCrayolan,
     height: 120,
     width: 250,
     borderRadius: 15,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontFamily: 'Aesthet Nova Regular',
-    color: colors.white,
+    color: COLORS.white,
   },
   textHarga: {
     fontSize: 18,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   minus: {
-    backgroundColor: '#0a4823',
+    backgroundColor: COLORS.forestGreenTraditional,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   add: {
-    backgroundColor: '#0a4823',
+    backgroundColor: COLORS.forestGreenTraditional,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
