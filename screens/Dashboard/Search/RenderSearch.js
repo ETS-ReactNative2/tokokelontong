@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   title: {
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 30,
     fontFamily: 'Aesthet Nova Black',
   },
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   boxSearch: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     borderRadius: 10,
     paddingHorizontal: 10,
     flex: 1,
@@ -81,10 +81,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Aesthet Nova Regular',
     flex: 1,
     height: 40,
-    color: '#656565',
+    color: COLORS.dimGray,
   },
   boxCamera: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
