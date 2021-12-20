@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { data, ItemHeader } from '.';
+import { COLORS } from '../../../constants';
 
 const HeaderRecipe = () => {
     return (
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginTop: 20,
     marginBottom: 5,
-    color: '#0a4823',
+    color: COLORS.forestGreenTraditional,
   },
 });
 
