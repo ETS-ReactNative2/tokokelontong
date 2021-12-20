@@ -1,0 +1,27 @@
+const ICONS = {
+  googleMap: 'google-maps',
+  ticket: 'ticket-confirmation-outline',
+  chevronRight: 'chevron-right',
+  truck: 'truck',
+  mapMarker: 'map-marker',
+  magnify: 'magnify',
+  camera: 'camera',
+  home: 'home-variant',
+  homeOutline: 'home-variant-outline',
+  book: 'book',
+  bookOutline: 'book-outline',
+  cart: 'cart',
+  cartOutline: 'cart-outline',
+  shopping: 'shopping',
+  shoppingOutline: 'shopping-outline',
+  account: 'account',
+  accountOutline: 'account-outline',
+  email: 'email',
+  pencil: 'pencil',
+  cellphone: 'cellphone',
+  twitter: 'twitter',
+  mapMarker: 'map-marker',
+  logout: 'logout-variant',
+};
+
+export default ICONS;
