@@ -1,6 +1,7 @@
 import {useNavigation} from '@react-navigation/core';
 import React from 'react';
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import { COLORS } from '../../../constants';
 import { colors } from '../../../src/config/colors';
 
 const Body = ({item}) => <ItemVertical item={item} />;
@@ -21,7 +22,7 @@ const ItemVertical = ({item}) => {
 
 const styles = StyleSheet.create({
   boxList: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     height: 110,
     marginEnd: 10,
     marginBottom: 10,
@@ -55,12 +56,12 @@ const styles = StyleSheet.create({
   resep: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 16,
-    color: '#656565',
+    color: COLORS.dimGray,
   },
   by: {
     fontFamily: 'Aesthet Nova Regular',
     fontSize: 14,
-    color: '#656565',
+    color: COLORS.dimGray,
   },
   totalResep: {
     fontFamily: 'Aesthet Nova Regular',
