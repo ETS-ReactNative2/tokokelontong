@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { DetailOrders } from './screens/Orders';
 import { SplashScreen } from './screens/Splash';
 import { BottomTab } from './screens/Navigation';
 import { DetailRecipe } from './screens/Recipe/Detail';
+import { DetailOrders } from './screens/Orders/DetailOrders';
 
 const Stack = createNativeStackNavigator();
 
