@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {RadioButton} from 'react-native-paper';
 import { data } from '.';
-import { COLORS } from '../../constants';
+import { COLORS, FONTS } from '../../constants';
 
 const Checkout = ({all, setAll}) => {
   const total = () => {
@@ -22,15 +22,15 @@ const Checkout = ({all, setAll}) => {
           onPress={() => setAll('all')}
           color={COLORS.dimGray}
         />
-        <Text style={styles.textAll}>Semua</Text>
+        <Text style={[styles.textAll, FONTS.h4]}>Semua</Text>
       </View>
       <View style={styles.containerTotal}>
         <View style={{alignItems: 'flex-end'}}>
-          <Text style={styles.total}>Total</Text>
-          <Text style={styles.harga}>Rp. {total()}</Text>
+          <Text style={[FONTS.h4, {color: COLORS.dimGray}]}>Total</Text>
+          <Text style={[{color: COLORS.red}, FONTS.h4]}>Rp. {total()}</Text>
         </View>
         <View style={styles.containerButtonCheckout}>
-          <Text style={styles.checkout}>Checkout</Text>
+          <Text style={[{color: COLORS.white}, FONTS.h4]}>Checkout</Text>
         </View>
       </View>
     </View>
@@ -52,8 +52,6 @@ const styles = StyleSheet.create({
   },
   textAll: {
     marginLeft: 5,
-    fontSize: 14,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
   },
   containerTotal: {
@@ -61,26 +59,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 5,
   },
-  total: {
-    fontSize: 14,
-    fontFamily: 'Aesthet Nova Regular',
-    color: COLORS.dimGray,
-  },
-  harga: {
-    fontSize: 14,
-    fontFamily: 'Aesthet Nova Regular',
-    color: 'red',
-  },
   containerButtonCheckout: {
     backgroundColor: COLORS.darkSpringGreen,
     marginLeft: 10,
     padding: 10,
     borderRadius: 10,
-  },
-  checkout: {
-    fontSize: 14,
-    fontFamily: 'Aesthet Nova Regular',
-    color: COLORS.white,
   },
 });
 

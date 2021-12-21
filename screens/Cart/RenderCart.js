@@ -3,7 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import {RadioButton} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { data } from '.';
-import { COLORS, ICONS } from '../../constants';
+import { COLORS, FONTS, ICONS } from '../../constants';
 
 const RenderCart = () => {
   return (
@@ -32,10 +32,10 @@ const ItemCart = ({item}) => {
             color={COLORS.dimGray}
           />
           <Icon name="store" color={COLORS.dimGray} size={22} />
-          <Text style={styles.namaPenjual}>{item.namaPenjual}</Text>
+          <Text style={[styles.namaPenjual, FONTS.h5]}>{item.namaPenjual}</Text>
           <Icon name="chevron-right" color={COLORS.dimGray} size={22} />
         </View>
-        <Text style={styles.ubah}>Ubah</Text>
+        <Text style={[styles.ubah, FONTS.h2]}>Ubah</Text>
       </View>
       <View style={styles.containerBodyItem}>
         <View>
@@ -50,17 +50,19 @@ const ItemCart = ({item}) => {
           </View>
         </View>
         <View>
-          <Text style={styles.order}>{item.order}</Text>
+          <Text style={[{color: COLORS.dimGray}, FONTS.h3]}>{item.order}</Text>
           <View style={styles.containerVarian}>
-            <Text style={styles.varian}>Varian : {item.varian}</Text>
+            <Text style={[styles.varian, FONTS.h1]}>
+              Varian : {item.varian}
+            </Text>
           </View>
           <View style={styles.boxHarga}>
-            <Text style={styles.harga}>Rp. {item.harga}</Text>
+            <Text style={[{color: COLORS.red}, FONTS.h6]}>Rp. {item.harga}</Text>
             <View style={styles.boxJumlah}>
               <View style={styles.boxMinus}>
                 <Icon name="minus" color={COLORS.black} size={15} />
               </View>
-              <Text style={styles.jumlah}>{item.jumlah}</Text>
+              <Text style={[styles.jumlah, FONTS.h5]}>{item.jumlah}</Text>
               <View style={styles.boxPlus}>
                 <Icon name="plus" color={COLORS.black} size={15} />
               </View>
@@ -71,13 +73,17 @@ const ItemCart = ({item}) => {
       <View style={styles.containerVoucher}>
         <View style={styles.containerVoucherIcon}>
           <Icon name={ICONS.ticket} color={COLORS.darkSpringGreen} size={15} />
-          <Text style={styles.voucher}>Voucher Diskon s/d Rp10RB tersedia</Text>
+          <Text style={[styles.voucher, FONTS.h2]}>
+            Voucher Diskon s/d Rp10RB tersedia
+          </Text>
         </View>
         <Icon name={ICONS.chevronRight} color={COLORS.dimGray} size={15} />
       </View>
       <View style={styles.cotainerShipping}>
         <Icon name={ICONS.truck} color={COLORS.darkSpringGreen} size={15} />
-        <Text style={styles.freeOngkir}>Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...</Text>
+        <Text style={[styles.freeOngkir, FONTS.h2]}>
+          Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp. ...
+        </Text>
       </View>
     </View>
   );
@@ -102,15 +108,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   namaPenjual: {
-    fontSize: 15,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
     marginLeft: 10,
     marginRight: 5,
   },
   ubah: {
-    fontSize: 12,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
     marginRight: 10,
   },
@@ -131,18 +133,11 @@ const styles = StyleSheet.create({
     marginRight: 15,
     borderRadius: 5,
   },
-  order: {
-    fontSize: 15,
-    fontFamily: 'Aesthet Nova Regular',
-    color: COLORS.dimGray,
-  },
   containerVarian: {
     marginTop: 10,
     alignItems: 'flex-start',
   },
   varian: {
-    fontSize: 11,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
     backgroundColor: COLORS.culturedE,
     padding: 5,
@@ -163,8 +158,6 @@ const styles = StyleSheet.create({
   },
   voucher: {
     marginLeft: 10,
-    fontSize: 12,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
   },
   cotainerShipping: {
@@ -176,18 +169,11 @@ const styles = StyleSheet.create({
   freeOngkir: {
     marginLeft: 10,
     flex: 1,
-    fontSize: 12,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
   },
   boxHarga: {
     marginTop: 20,
     marginBottom: 10,
-  },
-  harga: {
-    fontSize: 16,
-    fontFamily: 'Aesthet Nova Regular',
-    color: COLORS.red,
   },
   boxJumlah: {
     flexDirection: 'row',
@@ -202,8 +188,6 @@ const styles = StyleSheet.create({
     borderColor: COLORS.culturedE,
   },
   jumlah: {
-    fontSize: 15,
-    fontFamily: 'Aesthet Nova Regular',
     color: COLORS.dimGray,
     paddingHorizontal: 15,
     borderTopWidth: 0.5,

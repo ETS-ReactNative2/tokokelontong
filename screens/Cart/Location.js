@@ -1,14 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { COLORS, ICONS } from '../../constants';
+import { COLORS, FONTS, ICONS } from '../../constants';
 
 const Location = () => {
   return (
     <View style={styles.containerLocation}>
       <View style={styles.containerMaps}>
         <Icon name={ICONS.googleMap} color={COLORS.red} size={22} />
-        <Text style={styles.location}>Jawa Tengah, Surakarta, Sondakan</Text>
+        <Text style={[{marginLeft: 10, color: COLORS.dimGray}, FONTS.h4]}>
+          Jawa Tengah, Surakarta, Sondakan
+        </Text>
       </View>
       <Icon name="chevron-right" color={COLORS.dimGray} size={22} />
     </View>
@@ -26,12 +28,6 @@ const styles = StyleSheet.create({
   containerMaps: {
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  location: {
-    marginLeft: 10,
-    fontSize: 14,
-    fontFamily: 'Aesthet Nova Regular',
-    color: COLORS.dimGray,
   },
 });
 
