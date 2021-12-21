@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 1,
     elevation: 4,
-    shadowColor: 'green',
+    shadowColor: COLORS.green,
     shadowOffset: {
       width: 5,
       height: 10,

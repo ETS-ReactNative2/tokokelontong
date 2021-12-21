@@ -11,6 +11,7 @@ const COLORS = {
   culturedF: '#fafafa',
   forestGreenTraditional: '#0a4823',
   lightCoral: '#ff9797',
+  green: 'rgb(0,128,0)'
 };
 
 export default COLORS;
