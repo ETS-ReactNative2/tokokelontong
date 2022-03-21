@@ -1,5 +1,20 @@
 # Toko Kelontong
 
+# What is ?
+This is my work on creating an app based on react native, only in design (view). It's similar to e-commerce
+
+# Preview
+Part | Image |
+--- | --- |
+| Home | <img src="https://user-images.githubusercontent.com/58913447/159255385-24668424-4b65-4a65-afce-a1d2271fc28d.jpg" width="250" height="550" /> |
+| Recipe | <img src="https://user-images.githubusercontent.com/58913447/159256416-9f896275-f850-481e-8af1-e956a648d81d.jpg" width="250" height="550" /> |
+| Cart | <img src="https://user-images.githubusercontent.com/58913447/159256622-8941e7ef-3408-4e92-bbc0-f0823d9bdd34.jpg" width="250" height="550" /> |
+| Orders | <img src="https://user-images.githubusercontent.com/58913447/159256699-25a607a9-ddcd-4dd7-93f4-10bd503761c2.jpg" width="250" height="550" /> |
+| User | <img src="https://user-images.githubusercontent.com/58913447/159256791-0fdcbcfa-06b7-44aa-9757-1f29b9a99458.jpg" width="250" height="550" /> |
+
+# Running Program
+<img src="https://user-images.githubusercontent.com/58913447/159257295-dffd6d75-2586-4922-8a5c-c5634293f957.gif" width="250" height="550"/>
+
 ## LICENSE
 MIT License
 
